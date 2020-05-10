@@ -1,0 +1,24 @@
+{
+  "name": "krystal",
+  "version": "0.1.0",
+  "description": "tw5 plugin",
+  "dependencies": {
+    "tiddlywiki": "^5.1.22"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "TIDDLYWIKI_PLUGIN_PATH=plugins tiddlywiki main --build index",
+    "start": "TIDDLYWIKI_PLUGIN_PATH=plugins tiddlywiki main --listen",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crazko/krystal.git"
+  },
+  "author": "Roman Vesely",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crazko/krystal/issues"
+  },
+  "homepage": "https://github.com/crazko/krystal#readme"
+}

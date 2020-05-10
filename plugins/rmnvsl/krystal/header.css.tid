@@ -1,0 +1,30 @@
+title: $:/plugins/rmnvsl/krystal/header.css
+
+\rules only filteredtranscludeinline transcludeinline macrodef macrocallinline html
+
+.krystal-header {
+  background: <<color tiddler-background>>;
+  border-bottom: 1px solid <<color page-background>>;
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  height: var(--krystal-header-height);
+  position: relative;
+  z-index: 10;
+}
+
+.krystal-header > * {
+  margin: 0;
+}
+
+.krystal-header > * + * {
+  margin-left: 1em;
+}
+
+.krystal-header > h1 {
+  font-size: 1.5rem;
+}
+
+.krystal-header .tc-sidebar-search {
+  margin-left: auto;
+}

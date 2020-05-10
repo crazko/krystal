@@ -1,0 +1,11 @@
+{
+  "title": "$:/plugins/rmnvsl/krystal",
+  "name": "Krystal",
+  "description": "Horizontal view",
+  "author": "Roman Veselý",
+  "version": "0.1.0",
+  "core-version": ">=5.0.8",
+  "source": "https://github.com/crazko/krystal",
+  "plugin-type": "plugin",
+  "list": "readme"
+}

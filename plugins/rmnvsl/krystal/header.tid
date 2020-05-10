@@ -1,0 +1,14 @@
+title: $:/plugins/rmnvsl/krystal/header
+tags: $:/tags/PageTemplate
+list: $:/core/ui/SideBarSegments/site-title $:/core/ui/SideBarSegments/site-subtitle $:/core/ui/SideBarSegments/page-controls $:/plugins/rmnvsl/krystal/headertools $:/core/ui/SideBarSegments/search
+list-before: $:/core/ui/PageTemplate/topleftbar
+
+<header class="krystal-header">
+
+<$list filter="[all[shadows+tiddlers]tag[$:/plugins/rmnvsl/krystal/Header]!has[draft.of]]" variable="listItem" storyview="pop">
+
+<$transclude tiddler=<<listItem>> mode="inline"/>
+
+</$list>
+
+</header>

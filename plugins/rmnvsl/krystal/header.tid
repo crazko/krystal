@@ -5,7 +5,7 @@ list-before: $:/core/ui/PageTemplate/topleftbar
 
 <header class="krystal-header">
 
-<$list filter="[all[shadows+tiddlers]tag[$:/plugins/rmnvsl/krystal/Header]!has[draft.of]]" variable="listItem" storyview="pop">
+<$list filter="[all[shadows+tiddlers]tag[$:/plugins/rmnvsl/krystal/header]!has[draft.of]]" variable="listItem" storyview="pop">
 
 <$transclude tiddler=<<listItem>> mode="inline"/>
 

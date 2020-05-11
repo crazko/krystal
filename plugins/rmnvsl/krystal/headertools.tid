@@ -1,0 +1,22 @@
+title: $:/plugins/rmnvsl/krystal/headertools
+tags: $:/plugins/rmnvsl/krystal/header
+
+<$button class="tc-btn-invisible tc-tiddlylink">
+<$action-navigate $to="$:/core/ui/SideBar/Open"/>
+<<lingo SideBar/Open/Caption>>
+</$button>
+
+<$button class="tc-btn-invisible tc-tiddlylink">
+<$action-navigate $to="$:/core/ui/SideBar/Recent"/>
+<<lingo SideBar/Recent/Caption>>
+</$button>
+
+<$button class="tc-btn-invisible tc-tiddlylink">
+<$action-navigate $to="$:/core/ui/MoreSideBar/All"/>
+<<lingo SideBar/All/Caption>>
+</$button>
+
+<$button class="tc-btn-invisible tc-tiddlylink">
+<$action-navigate $to="$:/core/ui/SideBar/More"/>
+<<lingo SideBar/More/Caption>>
+</$button>

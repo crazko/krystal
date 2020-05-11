@@ -1,0 +1,50 @@
+title: $:/plugins/rmnvsl/krystal/references.css
+tags: $:/tags/Stylesheet
+
+\rules only filteredtranscludeinline transcludeinline macrodef macrocallinline html
+
+.krystal-references {
+  background: <<color page-background>>;
+  font-size: 0.75em;
+  padding: 0.5rem;
+  list-style: none;
+  margin-top: 3rem;
+  margin-bottom: 0;
+  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.krystal-references__title {
+  font-size: 1.25em;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.krystal-references__reference {
+  width: 50%;
+}
+
+.krystal-references__reference > a {
+  color: inherit;
+  background: inherit;
+  display: block;
+  text-decoration: none;
+  padding: 0.5rem;
+  height: 130px;
+  overflow: hidden;
+  position: relative;
+  <<transition "all 0.125s ease">>
+}
+
+.krystal-references__reference > a:hover {
+  color: <<color sidebar-tab-foreground>>;
+  background: <<color sidebar-tab-background>>;
+  text-decoration: none;
+}
+
+.krystal-references__content a {
+  color: inherit !important;
+  text-decoration: none !important;
+  pointer-events: none;
+}

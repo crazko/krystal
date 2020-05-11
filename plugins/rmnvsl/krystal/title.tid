@@ -1,0 +1,8 @@
+title: $:/plugins/rmnvsl/krystal/title
+tags: $:/tags/ViewTemplate
+
+<div class="krystal-tiddler__title">
+<$link>
+<$view field=title/>
+</$link>
+</div>

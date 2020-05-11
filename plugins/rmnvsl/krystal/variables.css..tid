@@ -1,0 +1,9 @@
+title: $:/plugins/rmnvsl/krystal/variables.css
+tags: $:/tags/Stylesheet
+type: text/css
+
+.tc-body {
+  --tiddler-padding: 42px;
+  --krystal-tiddler-width: 600px;
+  --krystal-header-height: 4em;
+}

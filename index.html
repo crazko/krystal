@@ -9591,7 +9591,11 @@ Error message and password prompt
         &quot;$:/plugins/rmnvsl/krystal/references&quot;: {
             &quot;title&quot;: &quot;$:/plugins/rmnvsl/krystal/references&quot;,
             &quot;tags&quot;: &quot;$:/tags/ViewTemplate&quot;,
-            &quot;text&quot;: &quot;&lt;ul class=\&quot;krystal-references\&quot;&gt;\n&lt;li class=\&quot;krystal-references__title\&quot;&gt;&lt;strong&gt;Odkazy vedúce sem:&lt;/strong&gt;&lt;/li&gt;\n&lt;$list filter=\&quot;[!is[system]all[current]backlinks[]sort[title]] -[is[current]]\&quot; emptyMessage=\&quot;- žiadne -\&quot;&gt;\n&lt;li class=\&quot;krystal-references__reference\&quot;&gt;\n&lt;$link&gt;\n&lt;b&gt;&lt;$view field=\&quot;title\&quot; /&gt;&lt;/b&gt;\n&lt;div class=\&quot;krystal-references__content\&quot;&gt;&lt;$transclude field=\&quot;text\&quot; mode=\&quot;inline\&quot; /&gt;&lt;/div&gt;\n&lt;/$link&gt;\n&lt;/li&gt;\n&lt;/$list&gt;\n&lt;/ul&gt;\n&quot;
+            &quot;text&quot;: &quot;&lt;ul class=\&quot;krystal-references\&quot;&gt;\n&lt;li class=\&quot;krystal-references__title\&quot;&gt;&lt;strong&gt;&lt;$transclude tiddler=\&quot;$:/plugins/rmnvsl/krystal/referenceshere\&quot; field=\&quot;text\&quot; mode=\&quot;inline\&quot; /&gt;&lt;/strong&gt;&lt;/li&gt;\n&lt;$list filter=\&quot;[!is[system]all[current]backlinks[]sort[title]] -[is[current]]\&quot;&gt;\n&lt;li class=\&quot;krystal-references__reference\&quot;&gt;\n&lt;$link&gt;\n&lt;b&gt;&lt;$view field=\&quot;title\&quot; /&gt;&lt;/b&gt;\n&lt;div class=\&quot;krystal-references__content\&quot;&gt;&lt;$transclude field=\&quot;text\&quot; mode=\&quot;inline\&quot; /&gt;&lt;/div&gt;\n&lt;/$link&gt;\n&lt;/li&gt;\n&lt;/$list&gt;\n&lt;/ul&gt;\n&quot;
+        },
+        &quot;$:/plugins/rmnvsl/krystal/referenceshere&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/rmnvsl/krystal/referenceshere&quot;,
+            &quot;text&quot;: &quot;Links to this note&quot;
         },
         &quot;$:/plugins/rmnvsl/krystal/river.css&quot;: {
             &quot;title&quot;: &quot;$:/plugins/rmnvsl/krystal/river.css&quot;,

@@ -2,8 +2,8 @@ title: $:/plugins/rmnvsl/krystal/references
 tags: $:/tags/ViewTemplate
 
 <ul class="krystal-references">
-<li class="krystal-references__title"><strong>Odkazy vedúce sem:</strong></li>
-<$list filter="[!is[system]all[current]backlinks[]sort[title]] -[is[current]]" emptyMessage="- žiadne -">
+<li class="krystal-references__title"><strong><$transclude tiddler="$:/plugins/rmnvsl/krystal/referenceshere" field="text" mode="inline" /></strong></li>
+<$list filter="[!is[system]all[current]backlinks[]sort[title]] -[is[current]]">
 <li class="krystal-references__reference">
 <$link>
 <b><$view field="title" /></b>

@@ -1,5 +1,5 @@
 created: 20200513173951113
-modified: 20200513182245055
+modified: 20200513182814552
 title: GettingStarted
 type: text/vnd.tiddlywiki
 
@@ -11,7 +11,7 @@ Thanks both for the inspiration, my (thinking about) notes finally started to be
 
 !! Features
 
-* horizontal story view for tiddlers
+* horizontal story view for tiddlers (show [[Example]] 👉)
 * bi-directional links at the bottom of each tiddler
 * customizable header (instead of sidebar)
 * nice animations and transitions 🐮

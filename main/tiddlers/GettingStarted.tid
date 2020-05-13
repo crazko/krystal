@@ -1,5 +1,5 @@
 created: 20200513173951113
-modified: 20200513182814552
+modified: 20200513183346456
 title: GettingStarted
 type: text/vnd.tiddlywiki
 
@@ -25,7 +25,7 @@ You can either:
 
 !!! 🚧 Warning
 
-Although it's already possible to use this plugin (I do use it for my notes in the current development stage), it's in the early alpha stage and has several drawbacks. Just to name a few:
+Although it's already possible to use this plugin (I do use it for my notes in the current development stage), it's an early alpha and has several drawbacks. Just to name a few:
 
 # no mobile (responsive) support so far
 # animations and transitions are buggy in some cases

@@ -1,0 +1,9 @@
+tags: $:/tags/SideBarSegment $:/plugins/rmnvsl/krystal/header
+title: $:/core/ui/SideBarSegments/site-subtitle
+type: text/vnd.tiddlywiki
+
+<div class="tc-site-subtitle">
+
+<$transclude tiddler="$:/SiteSubtitle" mode="inline"/>
+
+</div>

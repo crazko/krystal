@@ -1,0 +1,14 @@
+created: 20200513180807457
+modified: 20200513180916187
+title: Setup
+type: text/vnd.tiddlywiki
+
+Set up this ~TiddlyWiki
+
+!!! Title
+<$edit-text tiddler="$:/SiteTitle" default="" tag="input"/>
+
+!!! Subtitle
+<$edit-text tiddler="$:/SiteSubtitle" default="" tag="input"/>
+
+How to [[get started|GettingStarted]]? See the [[control panel|$:/ControlPanel]] for more options.

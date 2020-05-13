@@ -1,0 +1,9 @@
+created: 20200513174553167
+modified: 20200513175039388
+title: Recommended plugins
+type: text/vnd.tiddlywiki
+
+Installing following plugins will make the work with your ~TiddlyWiki easier:
+
+* [[Relink|https://flibbles.github.io/tw5-relink/]] - When renaming a tiddler, Relink can update the fields, filters, and widgets of all other tiddlers.
+* [[Edit-CompText|https://snowgoon88.github.io/TW5-extendedit/]] - This plugin adds completion when editing the body of a tiddler.

@@ -14,7 +14,6 @@ Handles tiddlers position
   };
 
   HorizontalStoryView.prototype.navigateTo = function (historyInfo) {
-    var duration = $tw.utils.getAnimationDuration();
     var listElementIndex = this.listWidget.findListItem(0, historyInfo.title);
     if (listElementIndex === undefined) {
       return;
@@ -26,15 +25,11 @@ Handles tiddlers position
     if (!(targetElement instanceof Element)) {
       return;
     }
-    if (duration) {
-      // Scroll the node into view
-      this.listWidget.dispatchEvent({
-        type: "tm-scroll",
-        target: targetElement,
-      });
-    } else {
-      targetElement.scrollIntoView();
-    }
+    // Scroll the node into view
+    this.listWidget.dispatchEvent({
+      type: "tm-scroll",
+      target: targetElement,
+    });
   };
 
   HorizontalStoryView.prototype.insert = function (widget) {

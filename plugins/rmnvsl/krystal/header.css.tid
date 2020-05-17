@@ -6,12 +6,10 @@ tags: $:/tags/Stylesheet
 .krystal-header {
   background: <<color tiddler-background>>;
   border-bottom: 1px solid <<color page-background>>;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   padding: 1em;
   position: relative;
   z-index: 10;
+  text-align: center;
 }
 
 .krystal-header > * {
@@ -19,7 +17,7 @@ tags: $:/tags/Stylesheet
 }
 
 .krystal-header > * + * {
-  margin-left: 1em;
+  margin: 0.5em 0 0 0;
 }
 
 .krystal-header > h1 {
@@ -32,4 +30,17 @@ tags: $:/tags/Stylesheet
 
 .krystal-header .tc-sidebar-search > p {
   margin: 0;
+}
+
+@media (min-width: 960px) {
+  .krystal-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: inherit;
+  }
+
+  .krystal-header > * + * {
+    margin: 0 0 0 1em;
+  }
 }

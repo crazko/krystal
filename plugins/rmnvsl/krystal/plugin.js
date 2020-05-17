@@ -33,21 +33,27 @@ Sets plugin behavior
   }
 
   function scroll(tiddlerElement) {
-    var storyRiver = tiddlerElement.parentElement;
+    const mediaQueryList = window.matchMedia("(min-width: 960px)");
 
-    var tiddlerPosition = Array.from(
-      storyRiver.querySelectorAll("div[data-tiddler-title]")
-    ).indexOf(tiddlerElement);
-    var tiddlerWidth = tiddlerElement.offsetWidth;
-    var windowWidth = window.innerWidth;
+    if (mediaQueryList.matches) {
+      var storyRiver = tiddlerElement.parentElement;
 
-    var position = windowWidth / 2 - tiddlerWidth / 2;
-    var newRiverPosition = Math.max(
-      tiddlerPosition * tiddlerWidth - position,
-      0
-    );
+      var tiddlerPosition = Array.from(
+        storyRiver.querySelectorAll("div[data-tiddler-title]")
+      ).indexOf(tiddlerElement);
+      var tiddlerWidth = tiddlerElement.offsetWidth;
+      var windowWidth = window.innerWidth;
 
-    storyRiver.scroll({ left: newRiverPosition, behavior: "smooth" });
+      var position = windowWidth / 2 - tiddlerWidth / 2;
+      var newRiverPosition = Math.max(
+        tiddlerPosition * tiddlerWidth - position,
+        0
+      );
+
+      storyRiver.scroll({ left: newRiverPosition, behavior: "smooth" });
+    } else {
+      tiddlerElement.scrollIntoView({ behavior: "smooth" });
+    }
   }
 
   function effects() {

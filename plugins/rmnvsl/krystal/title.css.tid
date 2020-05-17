@@ -4,41 +4,49 @@ tags: $:/tags/Stylesheet
 \rules only filteredtranscludeinline transcludeinline macrodef macrocallinline html
 
 .krystal-tiddler__title {
-  line-height: var(--tiddler-padding);
-  bottom: 0px;
-  left: 0px;
-  position: sticky;
-  width: 0;
-  height: 0;
-  transform: rotate(-90deg);
-  margin-top: auto;
-  margin-left: -42px;
-  opacity: 0;
-  <<transition "opacity 0.25s ease">>;  
+  display: none;
 }
 
-.krystal-tiddler__title--start-active,
-.krystal-tiddler__title--end-active {
-  opacity: 1;
-}
+@media (min-width: 960px) {
+  .krystal-tiddler__title {
+    display: block;
+    line-height: var(--tiddler-padding);
+    bottom: 0px;
+    left: 0px;
+    position: sticky;
+    width: 0;
+    height: 0;
+    transform: rotate(-90deg);
+    margin-top: auto;
+    margin-left: -42px;
+    opacity: 0;
+    <<transition "opacity 0.25s ease">>;  
+  }
 
-.krystal-tiddler__title > a {
-  color: <<color tiddler-title-foreground>> !important;
-  font-size: 1.5em;
-  font-weight: 400 !important;
-  text-decoration: none !important;
-  width: calc(100vh - var(--krystal-header-height) - ( 2 * var(--tiddler-padding)));
-  display: block;
-  overflow: hidden;
-  pointer-events: none;
-  margin-top: calc(var(--tiddler-padding) * -1);
-}
+  .krystal-tiddler__title--start-active,
+  .krystal-tiddler__title--end-active {
+    opacity: 1;
+  }
 
-.krystal-tiddler__title--start-active > a,
-.krystal-tiddler__title--end-active> a {
-  pointer-events: initial;
-}
+  .krystal-tiddler__title > a {
+    color: <<color tiddler-title-foreground>> !important;
+    font-size: 1.5em;
+    font-weight: 400 !important;
+    text-decoration: none !important;
+    width: calc(100vh - var(--krystal-header-height) - ( 2 * var(--tiddler-padding)));
+    display: block;
+    overflow: hidden;
+    pointer-events: none;
+    margin-top: calc(var(--tiddler-padding) * -1);
+    transform: translateY(-2px);
+  }
 
-.krystal-tiddler__title--end > a {
-  transform: rotate(180deg);
+  .krystal-tiddler__title--start-active > a,
+  .krystal-tiddler__title--end-active> a {
+    pointer-events: initial;
+  }
+
+  .krystal-tiddler__title--end > a {
+    transform: translateY(2px) rotate(180deg);
+  }
 }

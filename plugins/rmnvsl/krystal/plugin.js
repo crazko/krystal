@@ -21,6 +21,8 @@ Sets plugin behavior
         scroll(event.target);
       }
     });
+
+    $tw.hooks.addHook("th-navigating", closing);
   };
 
   function header() {
@@ -130,5 +132,58 @@ Sets plugin behavior
         tiddlerTitle.classList.remove("krystal-tiddler__title--end-active");
       }
     });
+  }
+
+  function closing(event) {
+    const STORY_TIDDLER_TITLE = "$:/StoryList";
+
+    const storyTiddler = $tw.wiki.getTiddler(STORY_TIDDLER_TITLE);
+    const tiddlers = $tw.wiki.getTiddlerList(STORY_TIDDLER_TITLE);
+
+    const navigateFrom = event.navigateFromTitle;
+    const navigateTo = event.navigateTo;
+
+    const config = $tw.wiki.getTiddler(
+      "$:/plugins/rmnvsl/krystal/config/close"
+    );
+
+    if (config && config.fields && config.fields.text === "disable") {
+      return event;
+    }
+
+    // Navigating from outside open tiddlers
+    if (!navigateFrom) {
+      return event;
+    }
+
+    // Destination tiddler already open
+    if (tiddlers.indexOf(navigateTo) === -1) {
+      const currentTiddlerIndex = tiddlers.indexOf(navigateFrom);
+      const tiddlersToClose = tiddlers.slice(currentTiddlerIndex + 1);
+
+      if (tiddlersToClose.length === 0) {
+        return event;
+      }
+
+      // Not working :(
+      // tiddlersToClose.forEach((tiddlerTitle) => () =>
+      //   $tw.rootWidget.dispatchEvent({
+      //     type: "tm-close-tiddler",
+      //     tiddlerTitle,
+      //   })
+      // );
+
+      const newStoryList = tiddlers.filter(
+        (title) => !tiddlersToClose.includes(title)
+      );
+
+      $tw.wiki.addTiddler(
+        new $tw.Tiddler({ title: STORY_TIDDLER_TITLE }, storyTiddler, {
+          list: newStoryList,
+        })
+      );
+    }
+
+    return event;
   }
 })();

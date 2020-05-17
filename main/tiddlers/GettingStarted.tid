@@ -13,7 +13,8 @@ Thanks both for the inspiration, my (thinking about) notes finally started to be
 
 * horizontal story view for tiddlers (show [[Example]] 👉)
 * bi-directional links at the bottom of each tiddler
-* customizable header (instead of sidebar)
+* closing open tiddlers to the right (customizable in [[plugin settings|$:/plugins/rmnvsl/krystal/settings]])
+* customizable header instead of sidebar (use tag {{$:/plugins/rmnvsl/krystal/header||$:/core/ui/TagTemplate}} to add new content)
 * nice animations and transitions 🐮
 
 !! Installation

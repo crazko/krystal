@@ -1,0 +1,5 @@
+title: $:/plugins/rmnvsl/krystal/settings
+tags: $:/tags/ControlPanel/Appearance
+caption: Krystal
+
+|<$link to="$:/plugins/rmnvsl/krystal/config/close">Close tiddlers tiddler to the right</$link>|<$checkbox tiddler="$:/plugins/rmnvsl/krystal/config/close" field="text" checked="enable" unchecked="disable"></$checkbox>|

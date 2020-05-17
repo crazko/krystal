@@ -101,6 +101,13 @@ Sets plugin behavior
           "krystal-tiddler__title--start-active",
           start
         );
+
+        if (!end) {
+          previousTiddler.classList.toggle(
+            "krystal-tiddler__frame--hide",
+            start
+          );
+        }
       }
 
       if (start) {
@@ -109,6 +116,7 @@ Sets plugin behavior
 
       if (end) {
         tiddler.classList.add("krystal-tiddler__frame--overlay");
+        tiddler.classList.add("krystal-tiddler__frame--hide");
         tiddlerTitle.classList.add(
           "krystal-tiddler__title--end",
           "krystal-tiddler__title--end-active"
@@ -118,6 +126,7 @@ Sets plugin behavior
           tiddler.classList.remove("krystal-tiddler__frame--overlay");
         }
 
+        tiddler.classList.remove("krystal-tiddler__frame--hide");
         tiddlerTitle.classList.remove("krystal-tiddler__title--end-active");
       }
     });

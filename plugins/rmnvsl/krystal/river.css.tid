@@ -39,6 +39,14 @@ tags: $:/tags/Stylesheet
     border-right: 1px solid <<color page-background>>;
     width: var(--krystal-tiddler-width);
   }
+
+  .tc-tiddler-frame > * {
+    transition: opacity 0.25s ease;
+  }
+
+  .krystal-tiddler__frame--hide > *:not(.krystal-tiddler__title) {
+    opacity: 0;
+  }
     
   .krystal-tiddler__frame--overlay {
     <<box-shadow "0 0 1em rgba(0, 0, 0, 0.125)">>;

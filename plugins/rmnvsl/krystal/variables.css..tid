@@ -5,5 +5,4 @@ type: text/css
 .tc-body {
   --tiddler-padding: 42px;
   --krystal-tiddler-width: 600px;
-  --krystal-header-height: 4em;
 }

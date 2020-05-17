@@ -1,17 +1,56 @@
 /*\
-title: $:/plugins/rmnvsl/krystal/tiddler.js
+title: $:/plugins/rmnvsl/krystal/plugin.js
 type: application/javascript
-module-type: library
+module-type: startup
 
-Handles tiddlers scroll styling
+Sets plugin behavior
 
 \*/
 (function () {
-  if (typeof window !== "undefined") {
+  exports.after = ["render"];
+
+  exports.startup = function () {
+    header();
+
+    window.addEventListener("resize", header);
+
     window.addEventListener("scroll", effects, true);
+
+    $tw.rootWidget.addEventListener("tm-scroll", function (event) {
+      if (event.type === "tm-scroll") {
+        scroll(event.target);
+      }
+    });
+  };
+
+  function header() {
+    const height = document.querySelector(".krystal-header").offsetHeight;
+    console.log(height);
+    document.documentElement.style.setProperty(
+      "--krystal-header-height",
+      `${height}px`
+    );
   }
 
-  function effects(e) {
+  function scroll(tiddlerElement) {
+    var storyRiver = tiddlerElement.parentElement;
+
+    var tiddlerPosition = Array.from(
+      storyRiver.querySelectorAll("div[data-tiddler-title]")
+    ).indexOf(tiddlerElement);
+    var tiddlerWidth = tiddlerElement.offsetWidth;
+    var windowWidth = window.innerWidth;
+
+    var position = windowWidth / 2 - tiddlerWidth / 2;
+    var newRiverPosition = Math.max(
+      tiddlerPosition * tiddlerWidth - position,
+      0
+    );
+
+    storyRiver.scroll({ left: newRiverPosition, behavior: "smooth" });
+  }
+
+  function effects() {
     var tiddlers = Array.from(document.querySelectorAll(".tc-tiddler-frame"));
     var tiddlersCount = tiddlers.length;
 

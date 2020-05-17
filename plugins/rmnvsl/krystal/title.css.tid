@@ -31,7 +31,7 @@ tags: $:/tags/Stylesheet
   display: block;
   overflow: hidden;
   pointer-events: none;
-  margin-top: -42px;
+  margin-top: calc(var(--tiddler-padding) * -1);
 }
 
 .krystal-tiddler__title--start-active > a,

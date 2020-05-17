@@ -3,14 +3,15 @@ tags: $:/tags/Stylesheet
 
 \rules only filteredtranscludeinline transcludeinline macrodef macrocallinline html
 
-.tc-sidebar-scrollable {
-  margin: 0;
+.tc-dropzone {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .tc-story-river {
   padding: 0;
   display: flex;
-  height: calc(100vh - var(--krystal-header-height));
   overflow-y: hidden;
 }
 

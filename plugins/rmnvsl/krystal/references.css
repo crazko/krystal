@@ -1,6 +1,3 @@
-title: $:/plugins/rmnvsl/krystal/references.css
-tags: $:/tags/Stylesheet
-
 \rules only filteredtranscludeinline transcludeinline macrodef macrocallinline html
 
 .krystal-references {
@@ -34,7 +31,7 @@ tags: $:/tags/Stylesheet
   height: 130px;
   overflow: hidden;
   position: relative;
-  <<transition "all 0.125s ease">>
+  transition: all 0.125s ease;
 }
 
 .krystal-references__reference > a:hover {

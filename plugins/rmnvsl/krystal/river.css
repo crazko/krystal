@@ -1,6 +1,3 @@
-title: $:/plugins/rmnvsl/krystal/river.css
-tags: $:/tags/Stylesheet
-
 \rules only filteredtranscludeinline transcludeinline macrodef macrocallinline html
 
 .tc-tiddler-frame {
@@ -49,7 +46,7 @@ tags: $:/tags/Stylesheet
   }
     
   .krystal-tiddler__frame--overlay {
-    <<box-shadow "0 0 1em rgba(0, 0, 0, 0.125)">>;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.125);
   }
   
   .tc-tiddler-frame:nth-of-type(1) { left: calc(0 * var(--tiddler-padding)) }
@@ -62,6 +59,16 @@ tags: $:/tags/Stylesheet
   .tc-tiddler-frame:nth-of-type(8) { left: calc(7 * var(--tiddler-padding)); }
   .tc-tiddler-frame:nth-of-type(9) { left: calc(8 * var(--tiddler-padding)); }
   .tc-tiddler-frame:nth-of-type(10) { left: calc(9 * var(--tiddler-padding)); }
+  .tc-tiddler-frame:nth-of-type(11) { left: calc(10 * var(--tiddler-padding)); }
+  .tc-tiddler-frame:nth-of-type(12) { left: calc(11 * var(--tiddler-padding)); }
+  .tc-tiddler-frame:nth-of-type(13) { left: calc(12 * var(--tiddler-padding)); }
+  .tc-tiddler-frame:nth-of-type(14) { left: calc(13 * var(--tiddler-padding)); }
+  .tc-tiddler-frame:nth-of-type(15) { left: calc(14 * var(--tiddler-padding)); }
+  .tc-tiddler-frame:nth-of-type(16) { left: calc(15 * var(--tiddler-padding)); }
+  .tc-tiddler-frame:nth-of-type(17) { left: calc(16 * var(--tiddler-padding)); }
+  .tc-tiddler-frame:nth-of-type(18) { left: calc(17 * var(--tiddler-padding)); }
+  .tc-tiddler-frame:nth-of-type(19) { left: calc(18 * var(--tiddler-padding)); }
+  .tc-tiddler-frame:nth-of-type(20) { left: calc(19 * var(--tiddler-padding)); }
 
   .tc-tiddler-frame:nth-last-of-type(1) { right: calc(-1 * var(--krystal-tiddler-width) + 1 * var(--tiddler-padding)); }
   .tc-tiddler-frame:nth-last-of-type(2) { right: calc(-1 * var(--krystal-tiddler-width) + 2 * var(--tiddler-padding)); }
@@ -73,4 +80,14 @@ tags: $:/tags/Stylesheet
   .tc-tiddler-frame:nth-last-of-type(8) { right: calc(-1 * var(--krystal-tiddler-width) + 8 * var(--tiddler-padding)); }
   .tc-tiddler-frame:nth-last-of-type(9) { right: calc(-1 * var(--krystal-tiddler-width) + 9 * var(--tiddler-padding)); }
   .tc-tiddler-frame:nth-last-of-type(10) { right: calc(-1 * var(--krystal-tiddler-width) + 10 * var(--tiddler-padding)); }
+  .tc-tiddler-frame:nth-last-of-type(11) { right: calc(-1 * var(--krystal-tiddler-width) + 11 * var(--tiddler-padding)); }
+  .tc-tiddler-frame:nth-last-of-type(12) { right: calc(-1 * var(--krystal-tiddler-width) + 12 * var(--tiddler-padding)); }
+  .tc-tiddler-frame:nth-last-of-type(13) { right: calc(-1 * var(--krystal-tiddler-width) + 13 * var(--tiddler-padding)); }
+  .tc-tiddler-frame:nth-last-of-type(14) { right: calc(-1 * var(--krystal-tiddler-width) + 14 * var(--tiddler-padding)); }
+  .tc-tiddler-frame:nth-last-of-type(15) { right: calc(-1 * var(--krystal-tiddler-width) + 15 * var(--tiddler-padding)); }
+  .tc-tiddler-frame:nth-last-of-type(16) { right: calc(-1 * var(--krystal-tiddler-width) + 16 * var(--tiddler-padding)); }
+  .tc-tiddler-frame:nth-last-of-type(17) { right: calc(-1 * var(--krystal-tiddler-width) + 17 * var(--tiddler-padding)); }
+  .tc-tiddler-frame:nth-last-of-type(18) { right: calc(-1 * var(--krystal-tiddler-width) + 18 * var(--tiddler-padding)); }
+  .tc-tiddler-frame:nth-last-of-type(19) { right: calc(-1 * var(--krystal-tiddler-width) + 19 * var(--tiddler-padding)); }
+  .tc-tiddler-frame:nth-last-of-type(20) { right: calc(-1 * var(--krystal-tiddler-width) + 20 * var(--tiddler-padding)); }
 }

@@ -1,6 +1,3 @@
-title: $:/plugins/rmnvsl/krystal/title.css
-tags: $:/tags/Stylesheet
-
 \rules only filteredtranscludeinline transcludeinline macrodef macrocallinline html
 
 .krystal-tiddler__title {
@@ -20,7 +17,7 @@ tags: $:/tags/Stylesheet
     margin-top: auto;
     margin-left: -42px;
     opacity: 0;
-    <<transition "opacity 0.25s ease">>;  
+    transition: opacity 0.25s ease;  
   }
 
   .krystal-tiddler__title--start-active,

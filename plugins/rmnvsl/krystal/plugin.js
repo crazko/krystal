@@ -12,6 +12,26 @@ Sets plugin behavior
   exports.startup = function () {
     header();
 
+    window.addEventListener("mouseover", (e) => {
+      const target = e.target.closest("a");
+
+      if (target) {
+        const tiddlerTitle = unescape(target.getAttribute("href").slice(1));
+        const tiddler = document.querySelector(
+          `div[data-tiddler-title="${tiddlerTitle}"]`
+        );
+
+        console.log(tiddlerTitle);
+
+        if (tiddler) {
+          tiddler.classList.add("krystal-tiddler__frame--highlight");
+          target.addEventListener("mouseleave", (_) => {
+            tiddler.classList.remove("krystal-tiddler__frame--highlight");
+          });
+        }
+      }
+    });
+
     window.addEventListener("resize", header);
 
     window.addEventListener("scroll", effects, true);
@@ -53,6 +73,7 @@ Sets plugin behavior
       );
 
       storyRiver.scroll({ left: newRiverPosition, behavior: "smooth" });
+      tiddlerElement.scrollTo({ top: 0, behavior: "smooth" });
     } else {
       tiddlerElement.scrollIntoView({ behavior: "smooth" });
     }
@@ -66,7 +87,7 @@ Sets plugin behavior
       return;
     }
 
-    var offset = 100;
+    var offset = 80;
     var tiddlerPadding = 42;
     var tiddlerWidth = tiddlers[0].offsetWidth;
     var windowWidth = window.innerWidth;

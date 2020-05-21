@@ -7,6 +7,9 @@ Sets plugin behavior
 
 \*/
 (function () {
+  const STORY_TIDDLER_TITLE = "$:/StoryList";
+  const ACTIVE_LINK_CLASS = "krystal-link--active";
+
   exports.after = ["render"];
 
   exports.startup = function () {
@@ -23,11 +26,40 @@ Sets plugin behavior
     });
 
     $tw.hooks.addHook("th-navigating", closing);
+
+    $tw.wiki.addEventListener("change", highlight);
   };
+
+  function highlight(changes) {
+    if (!$tw.utils.hop(changes, STORY_TIDDLER_TITLE)) {
+      return;
+    }
+
+    const config = $tw.wiki.getTiddler(
+      "$:/plugins/rmnvsl/krystal/config/highlight"
+    );
+
+    if (config && config.fields && config.fields.text === "disable") {
+      return;
+    }
+
+    const tiddlers = $tw.wiki.getTiddlerList(STORY_TIDDLER_TITLE);
+
+    Array.from(
+      document.querySelectorAll(`.${ACTIVE_LINK_CLASS}`)
+    ).forEach((link) => link.classList.remove(ACTIVE_LINK_CLASS));
+
+    tiddlers.forEach((tiddler) => {
+      Array.from(
+        document.querySelectorAll(
+          `.tc-tiddler-body a[href="#${encodeURIComponent(tiddler)}"]`
+        )
+      ).forEach((link) => link.classList.add(ACTIVE_LINK_CLASS));
+    });
+  }
 
   function header() {
     const height = document.querySelector(".krystal-header").offsetHeight;
-    console.log(height);
     document.documentElement.style.setProperty(
       "--krystal-header-height",
       `${height}px`
@@ -135,8 +167,6 @@ Sets plugin behavior
   }
 
   function closing(event) {
-    const STORY_TIDDLER_TITLE = "$:/StoryList";
-
     const storyTiddler = $tw.wiki.getTiddler(STORY_TIDDLER_TITLE);
     const tiddlers = $tw.wiki.getTiddlerList(STORY_TIDDLER_TITLE);
 

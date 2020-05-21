@@ -13,9 +13,13 @@ Thanks both for the inspiration, my (thinking about) notes finally started to be
 
 * horizontal story view for tiddlers (show [[Example]] 👉)
 * bi-directional links at the bottom of each tiddler
-* closing open tiddlers to the right (customizable in [[plugin settings|$:/plugins/rmnvsl/krystal/settings]])
 * customizable header instead of sidebar (use tag {{$:/plugins/rmnvsl/krystal/header||$:/core/ui/TagTemplate}} to add new content)
 * nice animations and transitions 🐮
+
+!!! Customizable in [[plugin settings|$:/plugins/rmnvsl/krystal/settings]]
+
+* closing open tiddlers to the right
+* highlight links of open tiddlers
 
 !! Installation
 
@@ -28,7 +32,6 @@ You can either:
 
 Although it's already possible to use this plugin (I do use it for my notes in the current development stage), it's an early alpha and has several drawbacks. Just to name a few:
 
-# no mobile (responsive) support so far
 # animations and transitions are buggy in some cases
 # I'm still looking around how ~TiddlyWiki works
 

@@ -3,3 +3,4 @@ tags: $:/tags/ControlPanel/Appearance
 caption: Krystal
 
 |<$link to="$:/plugins/rmnvsl/krystal/config/close">Close tiddlers tiddler to the right</$link>|<$checkbox tiddler="$:/plugins/rmnvsl/krystal/config/close" field="text" checked="enable" unchecked="disable"></$checkbox>|
+|<$link to="$:/plugins/rmnvsl/krystal/config/highlight">Highlight open tiddlers links</$link><br>//Refresh if still highlighted//|<$checkbox tiddler="$:/plugins/rmnvsl/krystal/config/highlight" field="text" checked="enable" unchecked="disable"></$checkbox>|

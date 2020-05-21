@@ -41,6 +41,10 @@
     transition: opacity 0.25s ease;
   }
 
+  .krystal-link--active {
+    background: <<color message-background>>;
+  }
+
   .krystal-tiddler__frame--hide > *:not(.krystal-tiddler__title) {
     opacity: 0;
   }

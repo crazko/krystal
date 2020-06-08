@@ -17,7 +17,8 @@ Sets plugin behavior
 
     window.addEventListener("resize", header);
 
-    window.addEventListener("scroll", effects, true);
+    const throttledTiddlerFrameEffects = throttle(tiddlerFrameEffects, 100);
+    window.addEventListener("scroll", throttledTiddlerFrameEffects, true);
 
     $tw.rootWidget.addEventListener("tm-scroll", function (event) {
       if (event.type === "tm-scroll") {
@@ -25,12 +26,13 @@ Sets plugin behavior
       }
     });
 
-    $tw.hooks.addHook("th-navigating", closing);
+    $tw.hooks.addHook("th-navigating", closeTiddlersToRight);
 
-    $tw.wiki.addEventListener("change", highlight);
+    $tw.wiki.addEventListener("change", highlightOpenTiddlerLinks);
+    $tw.wiki.addEventListener("change", reinitiateTiddlerFrameEffects);
   };
 
-  function highlight(changes) {
+  function highlightOpenTiddlerLinks(changes) {
     if (!$tw.utils.hop(changes, STORY_TIDDLER_TITLE)) {
       return;
     }
@@ -90,7 +92,7 @@ Sets plugin behavior
     }
   }
 
-  function effects() {
+  function tiddlerFrameEffects() {
     var tiddlers = Array.from(document.querySelectorAll(".tc-tiddler-frame"));
     var tiddlersCount = tiddlers.length;
 
@@ -166,7 +168,15 @@ Sets plugin behavior
     });
   }
 
-  function closing(event) {
+  function reinitiateTiddlerFrameEffects(changes) {
+    if (!$tw.utils.hop(changes, STORY_TIDDLER_TITLE)) {
+      return;
+    }
+    var duration = $tw.utils.getAnimationDuration() || 0;
+    setTimeout(tiddlerFrameEffects, duration);
+  }
+
+  function closeTiddlersToRight(event) {
     const storyTiddler = $tw.wiki.getTiddler(STORY_TIDDLER_TITLE);
     const tiddlers = $tw.wiki.getTiddlerList(STORY_TIDDLER_TITLE);
 
@@ -215,5 +225,24 @@ Sets plugin behavior
     }
 
     return event;
+  }
+
+  // ---
+
+  function throttle(callback, limit) {
+    var wait = false; // Initially, we're not waiting
+
+    return function () {
+      // We return a throttled function
+      if (!wait) {
+        // If we're not waiting
+        callback.call(); // Execute users function
+        wait = true; // Prevent future invocations
+        setTimeout(function () {
+          // After a period of time
+          wait = false; // And allow future invocations
+        }, limit);
+      }
+    };
   }
 })();

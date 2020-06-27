@@ -101,7 +101,9 @@ Sets plugin behavior
     }
 
     var offset = 100;
-    var tiddlerPadding = 42;
+    var tiddlerPadding = Number(
+      window.getComputedStyle(tiddlers[0]).padding.slice(0, -2)
+    );
     var tiddlerWidth = tiddlers[0].offsetWidth;
     var windowWidth = window.innerWidth;
 

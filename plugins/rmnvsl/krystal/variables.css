@@ -1,4 +1,12 @@
+\rules only filteredtranscludeinline transcludeinline macrodef macrocallinline html
+
 .tc-body {
-  --tiddler-padding: 42px;
-  --krystal-tiddler-width: 600px;
+  --tiddler-padding: {{$:/plugins/rmnvsl/krystal/config/tiddlerpadding}}px;
+  --tiddler-width: {{$:/plugins/rmnvsl/krystal/config/tiddlerwidth}}px;
+}
+
+/* Utils */
+
+.text-right {
+  text-align: right;
 }

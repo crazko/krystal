@@ -34,7 +34,8 @@
   .tc-tiddler-frame {
     border: none;
     border-right: 1px solid <<color page-background>>;
-    width: var(--krystal-tiddler-width);
+    padding: var(--tiddler-padding);
+    width: var(--tiddler-width);
   }
 
   .tc-tiddler-frame > * {
@@ -74,24 +75,24 @@
   .tc-tiddler-frame:nth-of-type(19) { left: calc(18 * var(--tiddler-padding)); }
   .tc-tiddler-frame:nth-of-type(20) { left: calc(19 * var(--tiddler-padding)); }
 
-  .tc-tiddler-frame:nth-last-of-type(1) { right: calc(-1 * var(--krystal-tiddler-width) + 1 * var(--tiddler-padding)); }
-  .tc-tiddler-frame:nth-last-of-type(2) { right: calc(-1 * var(--krystal-tiddler-width) + 2 * var(--tiddler-padding)); }
-  .tc-tiddler-frame:nth-last-of-type(3) { right: calc(-1 * var(--krystal-tiddler-width) + 3 * var(--tiddler-padding)); }
-  .tc-tiddler-frame:nth-last-of-type(4) { right: calc(-1 * var(--krystal-tiddler-width) + 4 * var(--tiddler-padding)); }
-  .tc-tiddler-frame:nth-last-of-type(5) { right: calc(-1 * var(--krystal-tiddler-width) + 5 * var(--tiddler-padding)); }
-  .tc-tiddler-frame:nth-last-of-type(6) { right: calc(-1 * var(--krystal-tiddler-width) + 6 * var(--tiddler-padding)); }
-  .tc-tiddler-frame:nth-last-of-type(7) { right: calc(-1 * var(--krystal-tiddler-width) + 7 * var(--tiddler-padding)); }
-  .tc-tiddler-frame:nth-last-of-type(8) { right: calc(-1 * var(--krystal-tiddler-width) + 8 * var(--tiddler-padding)); }
-  .tc-tiddler-frame:nth-last-of-type(9) { right: calc(-1 * var(--krystal-tiddler-width) + 9 * var(--tiddler-padding)); }
-  .tc-tiddler-frame:nth-last-of-type(10) { right: calc(-1 * var(--krystal-tiddler-width) + 10 * var(--tiddler-padding)); }
-  .tc-tiddler-frame:nth-last-of-type(11) { right: calc(-1 * var(--krystal-tiddler-width) + 11 * var(--tiddler-padding)); }
-  .tc-tiddler-frame:nth-last-of-type(12) { right: calc(-1 * var(--krystal-tiddler-width) + 12 * var(--tiddler-padding)); }
-  .tc-tiddler-frame:nth-last-of-type(13) { right: calc(-1 * var(--krystal-tiddler-width) + 13 * var(--tiddler-padding)); }
-  .tc-tiddler-frame:nth-last-of-type(14) { right: calc(-1 * var(--krystal-tiddler-width) + 14 * var(--tiddler-padding)); }
-  .tc-tiddler-frame:nth-last-of-type(15) { right: calc(-1 * var(--krystal-tiddler-width) + 15 * var(--tiddler-padding)); }
-  .tc-tiddler-frame:nth-last-of-type(16) { right: calc(-1 * var(--krystal-tiddler-width) + 16 * var(--tiddler-padding)); }
-  .tc-tiddler-frame:nth-last-of-type(17) { right: calc(-1 * var(--krystal-tiddler-width) + 17 * var(--tiddler-padding)); }
-  .tc-tiddler-frame:nth-last-of-type(18) { right: calc(-1 * var(--krystal-tiddler-width) + 18 * var(--tiddler-padding)); }
-  .tc-tiddler-frame:nth-last-of-type(19) { right: calc(-1 * var(--krystal-tiddler-width) + 19 * var(--tiddler-padding)); }
-  .tc-tiddler-frame:nth-last-of-type(20) { right: calc(-1 * var(--krystal-tiddler-width) + 20 * var(--tiddler-padding)); }
+  .tc-tiddler-frame:nth-last-of-type(1) { right: calc(-1 * var(--tiddler-width) + 1 * var(--tiddler-padding)); }
+  .tc-tiddler-frame:nth-last-of-type(2) { right: calc(-1 * var(--tiddler-width) + 2 * var(--tiddler-padding)); }
+  .tc-tiddler-frame:nth-last-of-type(3) { right: calc(-1 * var(--tiddler-width) + 3 * var(--tiddler-padding)); }
+  .tc-tiddler-frame:nth-last-of-type(4) { right: calc(-1 * var(--tiddler-width) + 4 * var(--tiddler-padding)); }
+  .tc-tiddler-frame:nth-last-of-type(5) { right: calc(-1 * var(--tiddler-width) + 5 * var(--tiddler-padding)); }
+  .tc-tiddler-frame:nth-last-of-type(6) { right: calc(-1 * var(--tiddler-width) + 6 * var(--tiddler-padding)); }
+  .tc-tiddler-frame:nth-last-of-type(7) { right: calc(-1 * var(--tiddler-width) + 7 * var(--tiddler-padding)); }
+  .tc-tiddler-frame:nth-last-of-type(8) { right: calc(-1 * var(--tiddler-width) + 8 * var(--tiddler-padding)); }
+  .tc-tiddler-frame:nth-last-of-type(9) { right: calc(-1 * var(--tiddler-width) + 9 * var(--tiddler-padding)); }
+  .tc-tiddler-frame:nth-last-of-type(10) { right: calc(-1 * var(--tiddler-width) + 10 * var(--tiddler-padding)); }
+  .tc-tiddler-frame:nth-last-of-type(11) { right: calc(-1 * var(--tiddler-width) + 11 * var(--tiddler-padding)); }
+  .tc-tiddler-frame:nth-last-of-type(12) { right: calc(-1 * var(--tiddler-width) + 12 * var(--tiddler-padding)); }
+  .tc-tiddler-frame:nth-last-of-type(13) { right: calc(-1 * var(--tiddler-width) + 13 * var(--tiddler-padding)); }
+  .tc-tiddler-frame:nth-last-of-type(14) { right: calc(-1 * var(--tiddler-width) + 14 * var(--tiddler-padding)); }
+  .tc-tiddler-frame:nth-last-of-type(15) { right: calc(-1 * var(--tiddler-width) + 15 * var(--tiddler-padding)); }
+  .tc-tiddler-frame:nth-last-of-type(16) { right: calc(-1 * var(--tiddler-width) + 16 * var(--tiddler-padding)); }
+  .tc-tiddler-frame:nth-last-of-type(17) { right: calc(-1 * var(--tiddler-width) + 17 * var(--tiddler-padding)); }
+  .tc-tiddler-frame:nth-last-of-type(18) { right: calc(-1 * var(--tiddler-width) + 18 * var(--tiddler-padding)); }
+  .tc-tiddler-frame:nth-last-of-type(19) { right: calc(-1 * var(--tiddler-width) + 19 * var(--tiddler-padding)); }
+  .tc-tiddler-frame:nth-last-of-type(20) { right: calc(-1 * var(--tiddler-width) + 20 * var(--tiddler-padding)); }
 }

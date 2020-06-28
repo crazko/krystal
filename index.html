@@ -147,6 +147,8 @@ Error message and password prompt
 
 <li>$:/core</li>
 
+<li>$:/DefaultTiddlers</li>
+
 <li>$:/isEncrypted</li>
 
 <li>$:/plugins/rmnvsl/krystal</li>
@@ -159,9 +161,11 @@ Error message and password prompt
 
 <li>$:/themes/tiddlywiki/vanilla</li>
 
+<li>Customizable Header</li>
+
 <li>Example</li>
 
-<li>GettingStarted</li>
+<li>Krystal</li>
 
 <li>Recommended plugins</li>
 
@@ -9560,10 +9564,13 @@ Error message and password prompt
     }
 }</pre>
 </div>
+<div title="$:/DefaultTiddlers" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<pre>Krystal</pre>
+</div>
 <div title="$:/isEncrypted" revision="0" bag="default">
 <pre>no</pre>
 </div>
-<div author="Roman Veselý" core-version="&gt;=5.0.8" dependents="" description="Horizontal view" list="readme settings" name="Krystal" plugin-type="plugin" source="https://github.com/crazko/krystal" title="$:/plugins/rmnvsl/krystal" type="application/json" version="0.1.6" revision="0" bag="default">
+<div author="Roman Veselý" core-version="&gt;=5.0.8" dependents="" description="Horizontal view" list="readme settings" name="Krystal" plugin-type="plugin" source="https://github.com/crazko/krystal" title="$:/plugins/rmnvsl/krystal" type="application/json" version="0.1.7" revision="0" bag="default">
 <pre>{
     &quot;tiddlers&quot;: {
         &quot;$:/plugins/rmnvsl/krystal/config/close&quot;: {
@@ -9597,7 +9604,7 @@ Error message and password prompt
         &quot;$:/plugins/rmnvsl/krystal/headertools&quot;: {
             &quot;title&quot;: &quot;$:/plugins/rmnvsl/krystal/headertools&quot;,
             &quot;tags&quot;: &quot;$:/plugins/rmnvsl/krystal/header&quot;,
-            &quot;text&quot;: &quot;&lt;$button class=\&quot;tc-btn-invisible tc-tiddlylink\&quot;&gt;\n&lt;$action-navigate $to=\&quot;$:/core/ui/SideBar/Open\&quot;/&gt;\n&lt;&lt;lingo SideBar/Open/Caption&gt;&gt;\n&lt;/$button&gt;\n\n&lt;$button class=\&quot;tc-btn-invisible tc-tiddlylink\&quot;&gt;\n&lt;$action-navigate $to=\&quot;$:/core/ui/SideBar/Recent\&quot;/&gt;\n&lt;&lt;lingo SideBar/Recent/Caption&gt;&gt;\n&lt;/$button&gt;\n\n&lt;$button class=\&quot;tc-btn-invisible tc-tiddlylink\&quot;&gt;\n&lt;$action-navigate $to=\&quot;$:/core/ui/MoreSideBar/All\&quot;/&gt;\n&lt;&lt;lingo SideBar/All/Caption&gt;&gt;\n&lt;/$button&gt;\n\n&lt;$button class=\&quot;tc-btn-invisible tc-tiddlylink\&quot;&gt;\n&lt;$action-navigate $to=\&quot;$:/core/ui/SideBar/More\&quot;/&gt;\n&lt;&lt;lingo SideBar/More/Caption&gt;&gt;\n&lt;/$button&gt;&quot;
+            &quot;text&quot;: &quot;&lt;$list filter=\&quot;[all[shadows+tiddlers]tag[$:/tags/SideBar]!has[draft.of]]\&quot;&gt;\n&lt;$button class=\&quot;tc-btn-invisible tc-tiddlylink\&quot; to=&lt;&lt;currentTiddler&gt;&gt;&gt;\n&lt;$transclude tiddler=\&quot;$buttonTemplate$\&quot; mode=\&quot;inline\&quot;&gt;\n&lt;$transclude tiddler=&lt;&lt;currentTiddler&gt;&gt; field=\&quot;caption\&quot;&gt;\n&lt;$macrocall $name=\&quot;currentTiddler\&quot; $type=\&quot;text/plain\&quot; $output=\&quot;text/plain\&quot;/&gt;\n&lt;/$transclude&gt;\n&lt;/$transclude&gt;\n&lt;/$button&gt;\n&lt;/$list&gt;&quot;
         },
         &quot;$:/plugins/rmnvsl/krystal/horizontal.js&quot;: {
             &quot;title&quot;: &quot;$:/plugins/rmnvsl/krystal/horizontal.js&quot;,
@@ -9704,7 +9711,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange" revision="0" bag="default">
 <pre>no</pre>
 </div>
-<div list="GettingStarted" title="$:/StoryList" revision="1" bag="default">
+<div list="Krystal" title="$:/StoryList" revision="1" bag="default">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.22" revision="0" bag="default">
@@ -9816,11 +9823,23 @@ Error message and password prompt
     }
 }</pre>
 </div>
+<div title="Customizable Header" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<pre>There are two ways of header customization:
+
+# Use tag {{$:/tags/SideBar||$:/core/ui/TagTemplate}} to update header links. You can read [[How to add a new tab to the sidebar|https://tiddlywiki.com/#How to add a new tab to the sidebar]], the process is the same.
+# Use tag {{$:/plugins/rmnvsl/krystal/header||$:/core/ui/TagTemplate}} to update sections.
+
+!! Ordering
+
+You can use fields `list-after` and `list-before` to sort the items. See [[Order of Tagged Tiddlers|https://tiddlywiki.com/#Order of Tagged Tiddlers]] for more information.
+
+Currently, the styling of search bar is hardcoded to be right aligned, so everything listed after it will be in the right corner.</pre>
+</div>
 <div created="20200513182827588" modified="20200513182912703" title="Example" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>See the reference link below? You can find a reference to this tiddler also in the [[GettingStarted]].</pre>
 </div>
-<div created="20200513173951113" modified="20200513183346456" title="GettingStarted" type="text/vnd.tiddlywiki" revision="0" bag="default">
-<pre>! Krystal - Horizontal Story River
+<div created="20200628120033834" modified="20200628120033485" title="Krystal" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<pre>! Horizontal Story River
 
 This plugin is an attempt to bring [[Andy Matuschak's Evergreen notes|https://notes.andymatuschak.org/]] system into [[TiddlyWiki|https://tiddlywiki.com/]] that I found after reading articles by [[Anne-Laure Le Cunff|https://nesslabs.com/]].
 
@@ -9830,7 +9849,7 @@ Thanks both for the inspiration, my (thinking about) notes finally started to be
 
 * horizontal story view for tiddlers (show [[Example]] 👉)
 * bi-directional links at the bottom of each tiddler
-* customizable header instead of sidebar (use tag {{$:/plugins/rmnvsl/krystal/header||$:/core/ui/TagTemplate}} to add new content)
+* [[Customizable Header]] instead of sidebar
 * nice animations and transitions 🐮
 
 !!! Customizable in [[plugin settings|$:/plugins/rmnvsl/krystal/settings]]

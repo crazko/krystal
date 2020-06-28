@@ -1,0 +1,13 @@
+title: Customizable Header
+type: text/vnd.tiddlywiki
+
+There are two ways of header customization:
+
+# Use tag {{$:/tags/SideBar||$:/core/ui/TagTemplate}} to update header links. You can read [[How to add a new tab to the sidebar|https://tiddlywiki.com/#How to add a new tab to the sidebar]], the process is the same.
+# Use tag {{$:/plugins/rmnvsl/krystal/header||$:/core/ui/TagTemplate}} to update sections.
+
+!! Ordering
+
+You can use fields `list-after` and `list-before` to sort the items. See [[Order of Tagged Tiddlers|https://tiddlywiki.com/#Order of Tagged Tiddlers]] for more information.
+
+Currently, the styling of search bar is hardcoded to be right aligned, so everything listed after it will be in the right corner.

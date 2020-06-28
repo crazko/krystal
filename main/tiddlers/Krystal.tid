@@ -1,9 +1,9 @@
-created: 20200513173951113
-modified: 20200513183346456
-title: GettingStarted
+created: 20200628120033834
+modified: 20200628120033485
+title: Krystal
 type: text/vnd.tiddlywiki
 
-! Krystal - Horizontal Story River
+! Horizontal Story River
 
 This plugin is an attempt to bring [[Andy Matuschak's Evergreen notes|https://notes.andymatuschak.org/]] system into [[TiddlyWiki|https://tiddlywiki.com/]] that I found after reading articles by [[Anne-Laure Le Cunff|https://nesslabs.com/]].
 
@@ -13,7 +13,7 @@ Thanks both for the inspiration, my (thinking about) notes finally started to be
 
 * horizontal story view for tiddlers (show [[Example]] 👉)
 * bi-directional links at the bottom of each tiddler
-* customizable header instead of sidebar (use tag {{$:/plugins/rmnvsl/krystal/header||$:/core/ui/TagTemplate}} to add new content)
+* [[Customizable Header]] instead of sidebar
 * nice animations and transitions 🐮
 
 !!! Customizable in [[plugin settings|$:/plugins/rmnvsl/krystal/settings]]

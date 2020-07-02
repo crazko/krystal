@@ -161,6 +161,8 @@ Error message and password prompt
 
 <li>$:/themes/tiddlywiki/vanilla</li>
 
+<li>Changelog</li>
+
 <li>Customizable Header</li>
 
 <li>Example</li>
@@ -9570,7 +9572,7 @@ Error message and password prompt
 <div title="$:/isEncrypted" revision="0" bag="default">
 <pre>no</pre>
 </div>
-<div author="Roman Veselý" core-version="&gt;=5.0.8" dependents="" description="Horizontal view" list="readme settings" name="Krystal" plugin-type="plugin" source="https://github.com/crazko/krystal" title="$:/plugins/rmnvsl/krystal" type="application/json" version="0.1.7" revision="0" bag="default">
+<div author="Roman Veselý" core-version="&gt;=5.0.8" dependents="" description="Horizontal Story River" list="readme settings" name="Krystal" plugin-type="plugin" source="https://github.com/crazko/krystal" title="$:/plugins/rmnvsl/krystal" type="application/json" version="0.2.0" revision="0" bag="default">
 <pre>{
     &quot;tiddlers&quot;: {
         &quot;$:/plugins/rmnvsl/krystal/config/close&quot;: {
@@ -9630,7 +9632,7 @@ Error message and password prompt
         &quot;$:/plugins/rmnvsl/krystal/references&quot;: {
             &quot;title&quot;: &quot;$:/plugins/rmnvsl/krystal/references&quot;,
             &quot;tags&quot;: &quot;$:/tags/ViewTemplate&quot;,
-            &quot;text&quot;: &quot;&lt;ul class=\&quot;krystal-references\&quot;&gt;\n&lt;li class=\&quot;krystal-references__title\&quot;&gt;&lt;strong&gt;&lt;$transclude tiddler=\&quot;$:/plugins/rmnvsl/krystal/referenceshere\&quot; field=\&quot;text\&quot; mode=\&quot;inline\&quot; /&gt;&lt;/strong&gt;&lt;/li&gt;\n&lt;$list filter=\&quot;[!is[system]all[current]backlinks[]sort[title]] -[is[current]]\&quot;&gt;\n&lt;li class=\&quot;krystal-references__reference\&quot;&gt;\n&lt;$link&gt;\n&lt;b&gt;&lt;$view field=\&quot;title\&quot; /&gt;&lt;/b&gt;\n&lt;div class=\&quot;krystal-references__content\&quot;&gt;&lt;$transclude field=\&quot;text\&quot; mode=\&quot;inline\&quot; /&gt;&lt;/div&gt;\n&lt;/$link&gt;\n&lt;/li&gt;\n&lt;/$list&gt;\n&lt;/ul&gt;\n&quot;
+            &quot;text&quot;: &quot;&lt;$list filter=\&quot;[!is[system]all[current]backlinks[]sort[title]] -[is[current]] +[limit[1]]\&quot; variable=none&gt;\n&lt;ul class=\&quot;krystal-references\&quot;&gt;\n&lt;li class=\&quot;krystal-references__title\&quot;&gt;&lt;strong&gt;&lt;$transclude tiddler=\&quot;$:/plugins/rmnvsl/krystal/referenceshere\&quot; field=\&quot;text\&quot; mode=\&quot;inline\&quot; /&gt;&lt;/strong&gt;&lt;/li&gt;\n&lt;$list filter=\&quot;[!is[system]all[current]backlinks[]sort[title]] -[is[current]]\&quot;&gt;\n&lt;li class=\&quot;krystal-references__reference\&quot;&gt;\n&lt;$link&gt;\n&lt;b&gt;&lt;$view field=\&quot;title\&quot; /&gt;&lt;/b&gt;\n&lt;div class=\&quot;krystal-references__content\&quot;&gt;&lt;$transclude field=\&quot;text\&quot; mode=\&quot;inline\&quot; /&gt;&lt;/div&gt;\n&lt;/$link&gt;\n&lt;/li&gt;\n&lt;/$list&gt;\n&lt;/ul&gt;\n&lt;/$list&gt;&quot;
         },
         &quot;$:/plugins/rmnvsl/krystal/referenceshere&quot;: {
             &quot;title&quot;: &quot;$:/plugins/rmnvsl/krystal/referenceshere&quot;,
@@ -9823,6 +9825,32 @@ Error message and password prompt
     }
 }</pre>
 </div>
+<div created="20200702081828800" modified="20200702083434300" title="Changelog" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<pre>All notable changes to this project will be documented here.
+
+The format is based on [[Keep a Changelog|https://keepachangelog.com/en/1.0.0/]],
+and this project adheres to [[Semantic Versioning|https://semver.org/spec/v2.0.0.html]].
+
+!! [0.2.0] - 2020-07-02
+
+!!! Changed
+
+* Hide &quot;Links to this note&quot; box when there are no backlinks to the current tiddler
+
+!! [0.1.7] - 2020-06-28
+
+!!! Changed
+
+* New possibilities of [[Customizable Header]]
+
+!! [0.1.6] - 2020-06-27
+
+!!! Added
+
+* Tiddlers styling options (width &amp; padding), see [[$:/plugins/rmnvsl/krystal/settings]]
+
+... previous versions changelog not provided.</pre>
+</div>
 <div title="Customizable Header" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>There are two ways of header customization:
 
@@ -9838,7 +9866,7 @@ Currently, the styling of search bar is hardcoded to be right aligned, so everyt
 <div created="20200513182827588" modified="20200513182912703" title="Example" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>See the reference link below? You can find a reference to this tiddler also in the [[GettingStarted]].</pre>
 </div>
-<div created="20200628120033834" modified="20200628120033485" title="Krystal" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div created="20200628120033834" modified="20200702081648563" title="Krystal" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>! Horizontal Story River
 
 This plugin is an attempt to bring [[Andy Matuschak's Evergreen notes|https://notes.andymatuschak.org/]] system into [[TiddlyWiki|https://tiddlywiki.com/]] that I found after reading articles by [[Anne-Laure Le Cunff|https://nesslabs.com/]].
@@ -9857,6 +9885,8 @@ Thanks both for the inspiration, my (thinking about) notes finally started to be
 * closing open tiddlers to the right
 * highlight links of open tiddlers
 * tiddler style (width &amp; padding)
+
+See the [[Changelog]].
 
 !! Installation
 

@@ -1,0 +1,29 @@
+created: 20200702081828800
+modified: 20200702083434300
+title: Changelog
+type: text/vnd.tiddlywiki
+
+All notable changes to this project will be documented here.
+
+The format is based on [[Keep a Changelog|https://keepachangelog.com/en/1.0.0/]],
+and this project adheres to [[Semantic Versioning|https://semver.org/spec/v2.0.0.html]].
+
+!! [0.2.0] - 2020-07-02
+
+!!! Changed
+
+* Hide "Links to this note" box when there are no backlinks to the current tiddler
+
+!! [0.1.7] - 2020-06-28
+
+!!! Changed
+
+* New possibilities of [[Customizable Header]]
+
+!! [0.1.6] - 2020-06-27
+
+!!! Added
+
+* Tiddlers styling options (width & padding), see [[$:/plugins/rmnvsl/krystal/settings]]
+
+... previous versions changelog not provided.

@@ -34,10 +34,20 @@
   transition: all 0.125s ease;
 }
 
+.krystal--static .krystal-references__reference > a {
+  height: initial;
+  overflow: initial;
+}
+
 .krystal-references__reference > a:hover {
   color: <<color sidebar-tab-foreground>>;
   background: <<color sidebar-tab-background>>;
   text-decoration: none;
+}
+
+.krystal--static .krystal-references__content {
+  height: 130px;
+  overflow: hidden;
 }
 
 .krystal-references__content a {

@@ -31,6 +31,10 @@
     height: 100%;
   }
 
+  .krystal--static .tc-story-river {
+    max-height: 100vh;
+  }
+
   .tc-tiddler-frame {
     border: none;
     border-right: 1px solid <<color page-background>>;
@@ -95,4 +99,9 @@
   .tc-tiddler-frame:nth-last-of-type(18) { right: calc(-1 * var(--tiddler-width) + 18 * var(--tiddler-padding)); }
   .tc-tiddler-frame:nth-last-of-type(19) { right: calc(-1 * var(--tiddler-width) + 19 * var(--tiddler-padding)); }
   .tc-tiddler-frame:nth-last-of-type(20) { right: calc(-1 * var(--tiddler-width) + 20 * var(--tiddler-padding)); }
+
+  .krystal--static .tc-tiddler-frame {
+    left: initial;
+    right: initial;
+  }
 }

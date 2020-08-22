@@ -1,0 +1,18 @@
+created: 20200822124652145
+modified: 20200822125529558
+tags: 
+title: Installation
+type: text/vnd.tiddlywiki
+
+You can either:
+
+* save this whole ~TiddlyWiki by clicking the save button {{$:/core/ui/Buttons/save-wiki}}
+* add just the ''bare'' plugin by dragging the following link onto your project [[$:/plugins/rmnvsl/krystal]]
+* already installed? Check how to [[Update]] to the new version.
+
+!!! ⚠ Warning
+
+Although it's already possible to use this plugin (I do use it for my notes in the current development stage), it's an early alpha and has several drawbacks. Just to name a few:
+
+# animations and transitions are buggy in some cases 🐛
+# I'm still looking around how ~TiddlyWiki works 🤸‍♂️

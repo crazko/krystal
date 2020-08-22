@@ -1,11 +1,11 @@
 created: 20200628120033834
-modified: 20200822122633970
+modified: 20200822125941664
 title: Krystal
 type: text/vnd.tiddlywiki
 
 ! Horizontal Story River
 
-This plugin is an attempt to bring [[Andy Matuschak's Evergreen notes|https://notes.andymatuschak.org/]] system into [[TiddlyWiki|https://tiddlywiki.com/]] that I found after reading articles by [[Anne-Laure Le Cunff|https://nesslabs.com/]].
+This plugin is an attempt to bring [[Andy Matuschak's Evergreen notes|https://notes.andymatuschak.org/]] system into [[TiddlyWiki|https://tiddlywiki.com/]]. I found it by reading articles by [[Anne-Laure Le Cunff|https://nesslabs.com/]].
 
 Thanks both for the inspiration, my (thinking about) notes finally started to become (somehow) useful!
 
@@ -13,7 +13,7 @@ Made by [[Roman Veselý|https://romanvesely.com/]] - <span class="krystal-icon">
 
 !! Features
 
-* horizontal story view for tiddlers (show [[Example]] 👉)
+* horizontal story view for tiddlers (see [[Example]] 👉)
 * bi-directional links at the bottom of each tiddler
 * [[Customizable Header]] instead of sidebar
 * edit/view [[Toolbar option to maximize tiddler width]]
@@ -25,24 +25,12 @@ Made by [[Roman Veselý|https://romanvesely.com/]] - <span class="krystal-icon">
 * highlight links of open tiddlers
 * tiddler style (width & padding)
 
-See the [[Changelog]].
+---
 
-!! Installation
+* [[Changelog]]
+* [[Installation]]
+* [[Update]]
+* [[Setup]]
+* [[Recommended plugins]]
 
-You can either:
-
-* save this whole ~TiddlyWiki by clicking the save button {{$:/core/ui/Buttons/save-wiki}}, or
-* add just the ''bare'' plugin by dragging the following link onto your project [[$:/plugins/rmnvsl/krystal]]
-
-!!! 🚧 Warning
-
-Although it's already possible to use this plugin (I do use it for my notes in the current development stage), it's an early alpha and has several drawbacks. Just to name a few:
-
-# animations and transitions are buggy in some cases
-# I'm still looking around how ~TiddlyWiki works
-
-You can leave a feedback here https://github.com/crazko/krystal/issues.
-
-!! Setup
-
-You can [[Setup]] and use ~TiddlyWiki with just this plugin, but make sure you also check the list of [[Recommended plugins]].
+You can leave a feedback here https://github.com/crazko/krystal/issues. Thanks!

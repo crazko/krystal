@@ -1,14 +1,14 @@
 created: 20200513180807457
-modified: 20200513180916187
+modified: 20200822125940972
 title: Setup
 type: text/vnd.tiddlywiki
-
-Set up this ~TiddlyWiki
 
 !!! Title
 <$edit-text tiddler="$:/SiteTitle" default="" tag="input"/>
 
 !!! Subtitle
 <$edit-text tiddler="$:/SiteSubtitle" default="" tag="input"/>
+
+Go to [[plugin settings|$:/plugins/rmnvsl/krystal/settings]] for more options. Make sure you also check the list of [[Recommended plugins]].
 
 How to [[get started|GettingStarted]]? See the [[control panel|$:/ControlPanel]] for more options.

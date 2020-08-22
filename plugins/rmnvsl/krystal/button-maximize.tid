@@ -1,0 +1,15 @@
+caption: {{$:/plugins/rmnvsl/krystal/images/maximize-tiddler}} maximize tiddler
+description: Make tiddler full-width
+tags: $:/tags/ViewToolbar $:/tags/EditToolbar
+title: $:/plugins/rmnvsl/krystal/buttons/maximize
+type: text/vnd.tiddlywiki
+
+<$button tooltip="Make tiddler full-width" aria-label="maximize tiddler" class=<<tv-config-toolbar-class>>>
+<$action-sendmessage $message="tm-maximize" $param=<<currentTiddler>>/>
+<$list filter="[<tv-config-toolbar-icons>match[yes]]">
+{{$:/plugins/rmnvsl/krystal/images/maximize-tiddler}}
+</$list>
+<$list filter="[<tv-config-toolbar-text>match[yes]]">
+<span class="tc-btn-text">maximize tiddler</span>
+</$list>
+</$button>

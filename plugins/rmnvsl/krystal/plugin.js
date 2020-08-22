@@ -9,6 +9,7 @@ Sets plugin behavior
 (function () {
   const STORY_TIDDLER_TITLE = "$:/StoryList";
   const ACTIVE_LINK_CLASS = "krystal-link--active";
+  const MAXIMIZED_TIDDLER_CLASS = "krystal-tiddler__frame--maximized";
 
   exports.after = ["render"];
 
@@ -23,6 +24,12 @@ Sets plugin behavior
     $tw.rootWidget.addEventListener("tm-scroll", function (event) {
       if (event.type === "tm-scroll") {
         scroll(event.target);
+      }
+    });
+
+    $tw.rootWidget.addEventListener("tm-maximize", function (event) {
+      if (event.type === "tm-maximize") {
+        tiddlerFullscreen(event.param);
       }
     });
 
@@ -227,6 +234,14 @@ Sets plugin behavior
     }
 
     return event;
+  }
+
+  function tiddlerFullscreen(tiddlerTitle) {
+    const tiddler = document.querySelector(
+      `div[data-tiddler-title="${tiddlerTitle}"]`
+    );
+
+    tiddler.classList.toggle(MAXIMIZED_TIDDLER_CLASS);
   }
 
   // ---

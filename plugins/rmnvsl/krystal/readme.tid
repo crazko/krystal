@@ -1,3 +1,7 @@
 title: $:/plugins/rmnvsl/krystal/readme
 
 Horizontal story view for tiddlers and bi-directional links.
+
+Homepage: https://github.com/crazko/krystal
+
+Made by [[Roman Veselý|https://romanvesely.com/]] - <span class="krystal-icon">{{$:/core/images/github}}</span> [[@crazko|https://github.com/crazko]], <span class="krystal-icon">{{$:/core/images/twitter}}</span> [[@rmnvsl|https://twitter.com/rmnvsl]]

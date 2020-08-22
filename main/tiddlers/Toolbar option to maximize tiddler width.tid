@@ -1,0 +1,12 @@
+created: 20200822122155716
+modified: 20200822123555602
+title: Toolbar option to maximize tiddler width
+type: text/vnd.tiddlywiki
+
+{{maximize-tiddler.png}}
+
+---
+
+Visit [[$:/ControlPanel]] > Appearance > Toolbars > Edit Toolbar / View Toolbar.
+
+Find ''<span class="krystal-icon">{{$:/plugins/rmnvsl/krystal/images/maximize-tiddler}}</span> maximize tiddler'' option, check the checkbox to make it visible in the toolbar and/or drag & drop to re-position.

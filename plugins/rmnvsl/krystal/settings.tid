@@ -2,7 +2,7 @@ title: $:/plugins/rmnvsl/krystal/settings
 tags: $:/tags/ControlPanel/Appearance
 caption: Krystal
 
-|<$link to="$:/plugins/rmnvsl/krystal/config/close">Close tiddlers tiddler to the right</$link>|<$checkbox tiddler="$:/plugins/rmnvsl/krystal/config/close" field="text" checked="enable" unchecked="disable" default="enable"></$checkbox>|
+|<$link to="$:/plugins/rmnvsl/krystal/config/close">Close tiddlers to the right</$link>|<$checkbox tiddler="$:/plugins/rmnvsl/krystal/config/close" field="text" checked="enable" unchecked="disable" default="enable"></$checkbox>|
 |<$link to="$:/plugins/rmnvsl/krystal/config/highlight">Highlight open tiddlers links</$link><br>//Refresh if still highlighted//|<$checkbox tiddler="$:/plugins/rmnvsl/krystal/config/highlight" field="text" checked="enable" unchecked="disable" default="enable"></$checkbox>|
 |<$link to="$:/plugins/rmnvsl/krystal/config/tiddlerwidth">Tiddler width</$link>|<$edit-text tiddler="$:/plugins/rmnvsl/krystal/config/tiddlerwidth" default="" tag="input" type="number" class="text-right" />px|
 |<$link to="$:/plugins/rmnvsl/krystal/config/tiddlerpadding">Tiddler padding</$link>|<$edit-text tiddler="$:/plugins/rmnvsl/krystal/config/tiddlerpadding" default="" tag="input" type="number" class="text-right" />px|

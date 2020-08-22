@@ -1,5 +1,5 @@
 created: 20200628120033834
-modified: 20200702081648563
+modified: 20200822122633970
 title: Krystal
 type: text/vnd.tiddlywiki
 
@@ -9,11 +9,14 @@ This plugin is an attempt to bring [[Andy Matuschak's Evergreen notes|https://no
 
 Thanks both for the inspiration, my (thinking about) notes finally started to become (somehow) useful!
 
+Made by [[Roman Veselý|https://romanvesely.com/]] - <span class="krystal-icon">{{$:/core/images/github}}</span> [[@crazko|https://github.com/crazko]], <span class="krystal-icon">{{$:/core/images/twitter}}</span> [[@rmnvsl|https://twitter.com/rmnvsl]]
+
 !! Features
 
 * horizontal story view for tiddlers (show [[Example]] 👉)
 * bi-directional links at the bottom of each tiddler
 * [[Customizable Header]] instead of sidebar
+* edit/view [[Toolbar option to maximize tiddler width]]
 * nice animations and transitions 🐮
 
 !!! Customizable in [[plugin settings|$:/plugins/rmnvsl/krystal/settings]]

@@ -1,5 +1,5 @@
 created: 20200628120033834
-modified: 20200702081648563
+modified: 20200822093915799
 title: Krystal
 type: text/vnd.tiddlywiki
 
@@ -8,6 +8,8 @@ type: text/vnd.tiddlywiki
 This plugin is an attempt to bring [[Andy Matuschak's Evergreen notes|https://notes.andymatuschak.org/]] system into [[TiddlyWiki|https://tiddlywiki.com/]] that I found after reading articles by [[Anne-Laure Le Cunff|https://nesslabs.com/]].
 
 Thanks both for the inspiration, my (thinking about) notes finally started to become (somehow) useful!
+
+Made by [[Roman Veselý|https://romanvesely.com/]] - <span class="krystal-icon">{{$:/core/images/github}}</span> [[@crazko|https://github.com/crazko]], <span class="krystal-icon">{{$:/core/images/twitter}}</span> [[@rmnvsl|https://twitter.com/rmnvsl]]
 
 !! Features
 

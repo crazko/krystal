@@ -23,7 +23,7 @@ Sets plugin behavior
 
     $tw.rootWidget.addEventListener("tm-scroll", function (event) {
       if (event.type === "tm-scroll") {
-        scroll(event.target);
+        scroll(event.target, event.delay);
       }
     });
 
@@ -75,8 +75,9 @@ Sets plugin behavior
     );
   }
 
-  function scroll(tiddlerElement) {
+  function scroll(tiddlerElement, delay) {
     const mediaQueryList = window.matchMedia("(min-width: 960px)");
+    const duration = $tw.utils.getAnimationDuration();
 
     if (mediaQueryList.matches) {
       var storyRiver = tiddlerElement.parentElement;
@@ -93,7 +94,10 @@ Sets plugin behavior
         0
       );
 
-      storyRiver.scroll({ left: newRiverPosition, behavior: "smooth" });
+      setTimeout(
+        () => storyRiver.scroll({ left: newRiverPosition, behavior: "smooth" }),
+        delay ? duration : 0
+      );
     } else {
       tiddlerElement.scrollIntoView({ behavior: "smooth" });
     }
@@ -213,14 +217,6 @@ Sets plugin behavior
       if (tiddlersToClose.length === 0) {
         return event;
       }
-
-      // Not working :(
-      // tiddlersToClose.forEach((tiddlerTitle) => () =>
-      //   $tw.rootWidget.dispatchEvent({
-      //     type: "tm-close-tiddler",
-      //     tiddlerTitle,
-      //   })
-      // );
 
       const newStoryList = tiddlers.filter(
         (title) => !tiddlersToClose.includes(title)

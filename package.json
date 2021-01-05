@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "tw5 plugin",
   "dependencies": {
-    "tiddlywiki": "^5.1.22"
+    "tiddlywiki": "^5.1.23"
   },
   "devDependencies": {},
   "scripts": {

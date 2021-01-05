@@ -1,5 +1,5 @@
 created: 20200822122721842
-modified: 20200822122721887
+modified: 20210105121507760
 title: Changelog
 type: text/vnd.tiddlywiki
 
@@ -7,6 +7,16 @@ All notable changes to this project will be documented here.
 
 The format is based on [[Keep a Changelog|https://keepachangelog.com/en/1.0.0/]],
 and this project adheres to [[Semantic Versioning|https://semver.org/spec/v2.0.0.html]].
+
+!! [0.3.2] - 2021-01-05
+
+!!! Changed
+
+* Update TiddlyWiki to version `5.1.23`, see the official [[Changelog|https://tiddlywiki.com/#Release%205.1.23]]
+
+!!! Fixed
+
+* Searchbox results not displayed in new version of TiddlyWiki ([[#22|https://github.com/crazko/krystal/issues/22]])
 
 !! [0.3.1] - 2020-10-01
 

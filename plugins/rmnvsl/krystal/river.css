@@ -63,7 +63,7 @@
     right: 0 !important;
     bottom: 0;
     width: 100%;
-    z-index: 100;
+    z-index: 5;
   }
   
   .tc-tiddler-frame:nth-of-type(1) { left: calc(0 * var(--tiddler-padding)) }

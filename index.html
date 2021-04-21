@@ -10076,7 +10076,7 @@ Error message and password prompt
 <div title="$:/isEncrypted" revision="0" bag="default">
 <pre>no</pre>
 </div>
-<div author="Roman Veselý" core-version="&gt;=5.0.8" dependents="" description="Horizontal Story River" list="readme settings" name="Krystal" plugin-type="plugin" source="https://github.com/crazko/krystal" title="$:/plugins/rmnvsl/krystal" type="application/json" version="0.3.4" revision="0" bag="default">
+<div author="Roman Veselý" core-version="&gt;=5.0.8" dependents="" description="Horizontal Story River" list="readme settings" name="Krystal" plugin-type="plugin" source="https://github.com/crazko/krystal" title="$:/plugins/rmnvsl/krystal" type="application/json" version="0.4.0" revision="0" bag="default">
 <pre>{
     &quot;tiddlers&quot;: {
         &quot;$:/plugins/rmnvsl/krystal/buttons/maximize&quot;: {
@@ -10171,7 +10171,7 @@ Error message and password prompt
             &quot;title&quot;: &quot;$:/plugins/rmnvsl/krystal/settings&quot;,
             &quot;tags&quot;: &quot;$:/tags/ControlPanel/Appearance&quot;,
             &quot;caption&quot;: &quot;Krystal&quot;,
-            &quot;text&quot;: &quot;|&lt;$link to=\&quot;$:/plugins/rmnvsl/krystal/config/close\&quot;&gt;Close tiddlers to the right&lt;/$link&gt;|&lt;$checkbox tiddler=\&quot;$:/plugins/rmnvsl/krystal/config/close\&quot; field=\&quot;text\&quot; checked=\&quot;enable\&quot; unchecked=\&quot;disable\&quot; default=\&quot;enable\&quot;&gt;&lt;/$checkbox&gt;|\n|&lt;$link to=\&quot;$:/plugins/rmnvsl/krystal/config/highlight\&quot;&gt;Highlight open tiddlers links&lt;/$link&gt;&lt;br&gt;//Refresh if still highlighted//|&lt;$checkbox tiddler=\&quot;$:/plugins/rmnvsl/krystal/config/highlight\&quot; field=\&quot;text\&quot; checked=\&quot;enable\&quot; unchecked=\&quot;disable\&quot; default=\&quot;enable\&quot;&gt;&lt;/$checkbox&gt;|\n|&lt;$link to=\&quot;$:/plugins/rmnvsl/krystal/config/tiddlerwidth\&quot;&gt;Tiddler width&lt;/$link&gt;|&lt;$edit-text tiddler=\&quot;$:/plugins/rmnvsl/krystal/config/tiddlerwidth\&quot; default=\&quot;\&quot; tag=\&quot;input\&quot; type=\&quot;number\&quot; class=\&quot;text-right\&quot; /&gt;px|\n|&lt;$link to=\&quot;$:/plugins/rmnvsl/krystal/config/tiddlerpadding\&quot;&gt;Tiddler padding&lt;/$link&gt;|&lt;$edit-text tiddler=\&quot;$:/plugins/rmnvsl/krystal/config/tiddlerpadding\&quot; default=\&quot;\&quot; tag=\&quot;input\&quot; type=\&quot;number\&quot; class=\&quot;text-right\&quot; /&gt;px|&quot;
+            &quot;text&quot;: &quot;|&lt;$link to=\&quot;$:/plugins/rmnvsl/krystal/references\&quot;&gt;Show tiddler's backlinks&lt;/$link&gt;|&lt;$checkbox tiddler=\&quot;$:/plugins/rmnvsl/krystal/references\&quot; tag=\&quot;$:/tags/ViewTemplate\&quot;&gt;&lt;/$checkbox&gt;|\n|&lt;$link to=\&quot;$:/plugins/rmnvsl/krystal/config/close\&quot;&gt;Close tiddlers to the right&lt;/$link&gt;|&lt;$checkbox tiddler=\&quot;$:/plugins/rmnvsl/krystal/config/close\&quot; field=\&quot;text\&quot; checked=\&quot;enable\&quot; unchecked=\&quot;disable\&quot; default=\&quot;enable\&quot;&gt;&lt;/$checkbox&gt;|\n|&lt;$link to=\&quot;$:/plugins/rmnvsl/krystal/config/highlight\&quot;&gt;Highlight open tiddlers links&lt;/$link&gt;&lt;br&gt;//Refresh if still highlighted//|&lt;$checkbox tiddler=\&quot;$:/plugins/rmnvsl/krystal/config/highlight\&quot; field=\&quot;text\&quot; checked=\&quot;enable\&quot; unchecked=\&quot;disable\&quot; default=\&quot;enable\&quot;&gt;&lt;/$checkbox&gt;|\n|&lt;$link to=\&quot;$:/plugins/rmnvsl/krystal/config/tiddlerwidth\&quot;&gt;Tiddler width&lt;/$link&gt;|&lt;$edit-text tiddler=\&quot;$:/plugins/rmnvsl/krystal/config/tiddlerwidth\&quot; default=\&quot;\&quot; tag=\&quot;input\&quot; type=\&quot;number\&quot; class=\&quot;text-right\&quot; /&gt;px|\n|&lt;$link to=\&quot;$:/plugins/rmnvsl/krystal/config/tiddlerpadding\&quot;&gt;Tiddler padding&lt;/$link&gt;|&lt;$edit-text tiddler=\&quot;$:/plugins/rmnvsl/krystal/config/tiddlerpadding\&quot; default=\&quot;\&quot; tag=\&quot;input\&quot; type=\&quot;number\&quot; class=\&quot;text-right\&quot; /&gt;px|&quot;
         },
         &quot;$:/config/EditToolbarButtons/Visibility/$:/plugins/rmnvsl/krystal/buttons/maximize&quot;: {
             &quot;title&quot;: &quot;$:/config/EditToolbarButtons/Visibility/$:/plugins/rmnvsl/krystal/buttons/maximize&quot;,
@@ -10367,6 +10367,12 @@ Error message and password prompt
 The format is based on [[Keep a Changelog|https://keepachangelog.com/en/1.0.0/]],
 and this project adheres to [[Semantic Versioning|https://semver.org/spec/v2.0.0.html]].
 
+!! [0.4.0] - 2021-04-21
+
+!!! Added
+
+* Option to show/hide tiddler's backlinks in [[settings|$:/plugins/rmnvsl/krystal/settings]] ([[#29|https://github.com/crazko/krystal/issues/29]])
+
 !! [0.3.4] - 2021-01-26
 
 !!! Fixed
@@ -10456,8 +10462,8 @@ Although it's already possible to use this plugin (I do use it for my notes in t
 # animations and transitions are buggy in some cases 🐛
 # I'm still looking around how ~TiddlyWiki works 🤸‍♂️</pre>
 </div>
-<div created="20200628120033834" modified="20210126204946058" title="Krystal" type="text/vnd.tiddlywiki" revision="0" bag="default">
-<pre>|!Version |0.3.4|
+<div created="20200628120033834" modified="20210421192113376" title="Krystal" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<pre>|!Version |0.4.0|
 |!Published |&lt;$view field=&quot;modified&quot; format=&quot;date&quot; template=&quot;MMM DDth, YYYY&quot; /&gt;|
 |!GitHub |https://github.com/crazko/krystal|
 

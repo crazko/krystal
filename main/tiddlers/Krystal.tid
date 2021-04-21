@@ -1,9 +1,9 @@
 created: 20200628120033834
-modified: 20210126204946058
+modified: 20210421192113376
 title: Krystal
 type: text/vnd.tiddlywiki
 
-|!Version |0.3.4|
+|!Version |0.4.0|
 |!Published |<$view field="modified" format="date" template="MMM DDth, YYYY" />|
 |!GitHub |https://github.com/crazko/krystal|
 

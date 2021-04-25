@@ -1,12 +1,14 @@
 created: 20200513174553167
-modified: 20201001210448720
+modified: 20210425174043590
 title: Recommended plugins
 type: text/vnd.tiddlywiki
 
-Installing following plugins will make the work with your ~TiddlyWiki easier:
+Installing following plugins will make the work with your [[TiddlyWiki|https://tiddlywiki.com/]] easier:
 
 * [[Relink|https://flibbles.github.io/tw5-relink/]] - When renaming a tiddler, Relink can update the fields, filters, and widgets of all other tiddlers.
 * [[Edit-CompText|https://snowgoon88.github.io/TW5-extendedit/]] - This plugin adds completion when editing the body of a tiddler.
 * [[TiddlyRemember|https://sobjornstad.github.io/TiddlyRemember/]] - A tool that integrates the TiddlyWiki with the spaced-repetition-flashcards tool [[Anki|https://apps.ankiweb.net/]]
 * [[Streams|https://saqimtiaz.github.io/sq-tw/streams.html]] - Streams is a keyboard friendly way to write and easily divide your text into separate tiddlers while writing.
 * [[Refnotes|https://kookma.github.io/Refnotes/]] - Refnotes is a set of macros and stylesheets for creating abbreviations, footnotes and citations.
+
+See also recommendation for [[Bi-directional links]] plugins.

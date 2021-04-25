@@ -1,5 +1,5 @@
 created: 20200628120033834
-modified: 20210421192113376
+modified: 20210425173936772
 title: Krystal
 type: text/vnd.tiddlywiki
 
@@ -18,13 +18,14 @@ Made by [[Roman Veselý|https://romanvesely.com/]] - <span class="krystal-icon">
 !! Features
 
 * horizontal story view for tiddlers (see [[Example]] 👉)
-* bi-directional links at the bottom of each tiddler
-* [[Customizable Header]] instead of sidebar
+* [[Bi-directional links]] at the bottom of each tiddler
+* [[Customizable header]] instead of sidebar
 * edit/view [[Toolbar option to maximize tiddler width]]
 * nice animations and transitions 🐮
 
-!!! Customizable in [[plugin settings|$:/plugins/rmnvsl/krystal/settings]]
+!!! Customizable in the [[plugin settings|$:/plugins/rmnvsl/krystal/settings]]
 
+* toggling list of backlinks
 * closing open tiddlers to the right
 * highlight links of open tiddlers
 * tiddler style (width & padding)

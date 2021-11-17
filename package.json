@@ -3,9 +3,8 @@
   "version": "0.1.0",
   "description": "tw5 plugin",
   "dependencies": {
-    "tiddlywiki": "^5.1.23"
+    "tiddlywiki": "^5.2.1"
   },
-  "devDependencies": {},
   "scripts": {
     "build": "TIDDLYWIKI_PLUGIN_PATH=plugins tiddlywiki main --build index",
     "start": "TIDDLYWIKI_PLUGIN_PATH=plugins tiddlywiki main --listen",

@@ -18,7 +18,7 @@ and this project adheres to [[Semantic Versioning|https://semver.org/spec/v2.0.0
 
 !!! Fixed
 
-* Tiddler's title is not displayed correctly ([[#13|https://github.com/crazko/krystal/issues/12]]) thanks [[@ericworks|https://github.com/ericworks]]
+* Tiddler's title is not displayed correctly ([[#13|https://github.com/crazko/krystal/issues/13]]) thanks [[@ericworks|https://github.com/ericworks]]
 
 !! [0.3.3] - 2021-01-23
 

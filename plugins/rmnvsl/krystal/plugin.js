@@ -11,6 +11,11 @@ Sets plugin behavior
   const ACTIVE_LINK_CLASS = "krystal-link--active";
   const MAXIMIZED_TIDDLER_CLASS = "krystal-tiddler__frame--maximized";
 
+  const KRYSTAL_CONFIG = {
+    highlight: "$:/plugins/rmnvsl/krystal/config/highlight",
+    tiddlerwidth: "$:/plugins/rmnvsl/krystal/config/tiddlerwidth",
+  };
+
   exports.after = ["render"];
 
   exports.startup = function () {
@@ -21,9 +26,11 @@ Sets plugin behavior
     const throttledTiddlerFrameEffects = throttle(tiddlerFrameEffects, 100);
     window.addEventListener("scroll", throttledTiddlerFrameEffects, true);
 
+    $tw.rootWidget.addEventListener("tm-remove", tiddlersCount);
     $tw.rootWidget.addEventListener("tm-scroll", function (event) {
       if (event.type === "tm-scroll") {
-        scroll(event.target, event.delay);
+        tiddlersCount(event);
+        scroll(event);
       }
     });
 
@@ -44,9 +51,7 @@ Sets plugin behavior
       return;
     }
 
-    const config = $tw.wiki.getTiddler(
-      "$:/plugins/rmnvsl/krystal/config/highlight"
-    );
+    const config = $tw.wiki.getTiddler(KRYSTAL_CONFIG.highlight);
 
     if (config && config.fields && config.fields.text === "disable") {
       return;
@@ -54,9 +59,9 @@ Sets plugin behavior
 
     const tiddlers = $tw.wiki.getTiddlerList(STORY_TIDDLER_TITLE);
 
-    Array.from(
-      document.querySelectorAll(`.${ACTIVE_LINK_CLASS}`)
-    ).forEach((link) => link.classList.remove(ACTIVE_LINK_CLASS));
+    Array.from(document.querySelectorAll(`.${ACTIVE_LINK_CLASS}`)).forEach(
+      (link) => link.classList.remove(ACTIVE_LINK_CLASS)
+    );
 
     tiddlers.forEach((tiddler) => {
       Array.from(
@@ -75,17 +80,25 @@ Sets plugin behavior
     );
   }
 
-  function scroll(tiddlerElement, delay) {
+  function tiddlersCount(event) {
+    const { widget } = event;
+    var tiddlersCount = widget.list.length;
+    document.body.style.setProperty("--tiddler-count", tiddlersCount);
+  }
+
+  function scroll(event) {
+    const { target: tiddlerElement } = event;
     const mediaQueryList = window.matchMedia("(min-width: 960px)");
-    const duration = $tw.utils.getAnimationDuration();
 
     if (mediaQueryList.matches) {
       var storyRiver = tiddlerElement.parentElement;
 
-      var tiddlerPosition = Array.from(
+      var tiddlers = Array.from(
         storyRiver.querySelectorAll("div[data-tiddler-title]")
-      ).indexOf(tiddlerElement);
-      var tiddlerWidth = tiddlerElement.offsetWidth;
+      );
+      var tiddlerPosition = tiddlers.indexOf(tiddlerElement);
+      var tiddlerWidth = $tw.wiki.getTiddler(KRYSTAL_CONFIG.tiddlerwidth).fields
+        .text;
       var windowWidth = window.innerWidth;
 
       var position = windowWidth / 2 - tiddlerWidth / 2;
@@ -94,10 +107,7 @@ Sets plugin behavior
         0
       );
 
-      setTimeout(
-        () => storyRiver.scroll({ left: newRiverPosition, behavior: "smooth" }),
-        delay ? duration : 0
-      );
+      storyRiver.scroll({ left: newRiverPosition, behavior: "smooth" });
     } else {
       tiddlerElement.scrollIntoView({ behavior: "smooth" });
     }

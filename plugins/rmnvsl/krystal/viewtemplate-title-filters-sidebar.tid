@@ -1,0 +1,5 @@
+title: $:/plugins/rmnvsl/krystal/viewtemplatetitlefilters/sidebar
+tags: $:/tags/ViewTemplateTitleFilter
+list-before: $:/config/ViewTemplateTitleFilters/system
+
+[tag[$:/tags/SideBar]then[$:/plugins/rmnvsl/krystal/viewtemplate/title/sidebar]]

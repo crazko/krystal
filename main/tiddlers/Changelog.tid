@@ -18,6 +18,11 @@ and this project adheres to [[Semantic Versioning|https://semver.org/spec/v2.0.0
 
 * Update TiddlyWiki to version `5.2.1`, see the official [[Changelog|https://tiddlywiki.com/#Release%205.2.1]]
 
+!!! Fixed
+
+* "Sidebar" tiddlers not rendered correctly in TW 5.2.1 ([[#39|https://github.com/crazko/krystal/issues/39]])
+* "Sidebar" tiddlers titles show caption instead of system name ([[#31|https://github.com/crazko/krystal/issues/31]])
+
 !! [0.4.0] - 2021-04-21
 
 !!! Added

@@ -1,0 +1,6 @@
+title: $:/plugins/rmnvsl/krystal/viewtemplate/title/sidebar
+
+\whitespace trim
+<h2 class="tc-title">
+<$view field="caption" format="plainwikified"><$view field="title"/></$view>
+</h2>

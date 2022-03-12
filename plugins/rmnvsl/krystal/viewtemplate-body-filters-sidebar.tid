@@ -1,0 +1,5 @@
+title: $:/plugins/rmnvsl/krystal/viewtemplatebodyfilters/sidebar
+tags: $:/tags/ViewTemplateBodyFilter
+list-before: $:/config/ViewTemplateBodyFilters/system
+
+[tag[$:/tags/SideBar]then[$:/core/ui/ViewTemplate/body/default]]

@@ -15,8 +15,6 @@ Handles tiddlers position
 
   HorizontalStoryView.prototype.navigateTo = function (historyInfo) {
     const listElementIndex = this.listWidget.findListItem(0, historyInfo.title);
-    const lastTiddlerName = this.listWidget.list.slice(-1)[0];
-    const currentTiddlerName = historyInfo.title;
 
     if (listElementIndex === undefined) {
       return;
@@ -34,7 +32,6 @@ Handles tiddlers position
     this.listWidget.dispatchEvent({
       type: "tm-scroll",
       target: targetElement,
-      delay: lastTiddlerName === currentTiddlerName,
     });
   };
 
@@ -77,6 +74,10 @@ Handles tiddlers position
 
   HorizontalStoryView.prototype.remove = function (widget) {
     const duration = $tw.utils.getAnimationDuration();
+
+    this.listWidget.dispatchEvent({
+      type: "tm-remove",
+    });
 
     if (duration) {
       const targetElement = widget.findFirstDomNode();

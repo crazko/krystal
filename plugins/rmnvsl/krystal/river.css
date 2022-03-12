@@ -31,6 +31,19 @@
     height: 100%;
   }
 
+  /**
+   * Fix for Firefox and Safari where sticky elements (tiddlers) cause different scrollWidth of parent element (story river).
+   */
+  .tc-story-river::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: calc(var(--tiddler-width) * var(--tiddler-count));
+    z-index: -1;
+  }
+
   .krystal--static .tc-story-river {
     max-height: 100vh;
   }

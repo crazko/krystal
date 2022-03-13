@@ -1,5 +1,9 @@
 \rules only filteredtranscludeinline transcludeinline macrodef macrocallinline html
 
+.krystal-header--big {
+  display: none;
+}
+
 .krystal-header {
   background: <<color tiddler-background>>;
   border-bottom: 1px solid <<color page-background>>;
@@ -21,17 +25,16 @@
   font-size: 1.5rem;
 }
 
-.krystal-header .tc-sidebar-search {
-  margin-left: auto;
-}
-
-.krystal-header .tc-sidebar-search > p {
-  margin: 0;
-}
-
 @media (min-width: 960px) {
-  .krystal-header {
+  .krystal-header--small {
+    display: none;
+  }
+
+  .krystal-header--big {
     display: flex;
+  }
+
+  .krystal-header {
     flex-wrap: wrap;
     align-items: center;
     text-align: inherit;

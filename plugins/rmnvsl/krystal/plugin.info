@@ -7,5 +7,5 @@
   "core-version": ">=5.0.8",
   "source": "https://github.com/crazko/krystal",
   "plugin-type": "plugin",
-  "list": "readme settings"
+  "list": "readme settings changelog"
 }

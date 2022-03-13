@@ -11,6 +11,7 @@ and this project adheres to [[Semantic Versioning|https://semver.org/spec/v2.0.0
 
 * Info about [[backlinking possibilities|https://crazko.github.io/krystal/#Bi-directional%20links]]
 * Changelog is part of the plugin
+* Tag {{$:/plugins/rmnvsl/krystal/header-small||$:/core/ui/TagTemplate}} to [[customize sections in header|https://crazko.github.io/krystal/#Customizable%20Header]] for small viewport ([[#32|https://github.com/crazko/krystal/issues/32]])
 
 !!! Changed
 

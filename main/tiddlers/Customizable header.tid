@@ -3,10 +3,15 @@ modified: 20210425164913880
 title: Customizable header
 type: text/vnd.tiddlywiki
 
-There are two ways of header customization:
+Use tag {{$:/tags/SideBar||$:/core/ui/TagTemplate}} to update header links. You can read [[How to add a new tab to the sidebar|https://tiddlywiki.com/#How to add a new tab to the sidebar]], the process is the same.
 
-# Use tag {{$:/tags/SideBar||$:/core/ui/TagTemplate}} to update header links. You can read [[How to add a new tab to the sidebar|https://tiddlywiki.com/#How to add a new tab to the sidebar]], the process is the same.
-# Use tag {{$:/plugins/rmnvsl/krystal/header||$:/core/ui/TagTemplate}} to update sections.
+!! Sections
+
+Use tag {{$:/plugins/rmnvsl/krystal/header||$:/core/ui/TagTemplate}} to update sections for big viewport.
+
+Use tag {{$:/plugins/rmnvsl/krystal/header-small||$:/core/ui/TagTemplate}} to update sections for small viewport.
+
+Thanks to that you can have different sections for small/big viewport depending on your needs.
 
 !! Ordering
 

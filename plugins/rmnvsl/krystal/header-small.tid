@@ -1,11 +1,11 @@
-title: $:/plugins/rmnvsl/krystal/header
+title: $:/plugins/rmnvsl/krystal/header-small
 tags: $:/tags/PageTemplate
 list: $:/core/ui/SideBarSegments/site-title $:/core/ui/SideBarSegments/site-subtitle $:/core/ui/SideBarSegments/page-controls $:/plugins/rmnvsl/krystal/headertools $:/core/ui/SideBarSegments/search
 list-before: $:/core/ui/PageTemplate/topleftbar
 
-<header class="krystal-header krystal-header--big">
+<header class="krystal-header krystal-header--small">
 
-<$list filter="[all[shadows+tiddlers]tag[$:/plugins/rmnvsl/krystal/header]!has[draft.of]]" variable="listItem" storyview="pop">
+<$list filter="[all[shadows+tiddlers]tag[$:/plugins/rmnvsl/krystal/header-small]!has[draft.of]]" variable="listItem" storyview="pop">
 
 <$transclude tiddler=<<listItem>> mode="inline"/>
 

@@ -1,0 +1,41 @@
+\rules only filteredtranscludeinline transcludeinline macrodef macrocallinline html
+ 
+.krystal-header .tc-sidebar-search {
+  display: inline-block;
+  margin-left: auto;
+}
+
+.krystal-header .tc-sidebar-search > p {
+  margin: 0;
+} 
+
+/**
+ * Very opinionated. Keep the same width of searchfield during searching.
+ */
+.krystal-header .tc-sidebar-search .tc-search .tc-popup-handle {
+  padding-right: 1em;
+}
+
+/* Position of the clear button above input field */
+.krystal-header .tc-sidebar-search .tc-search span:nth-child(2) button:nth-child(2) {
+  margin-left: -3.125em;
+  margin-top: 0.125em;
+  position: absolute;
+} 
+
+.krystal-header .tc-sidebar-search .tc-search span:nth-child(2) button:nth-child(2) svg {
+  width: 0.75em;
+  height: 0.75em;
+}
+
+/* Hides the number of results */
+.krystal-header .tc-sidebar-search .tc-search span:nth-child(2) button:nth-child(3) {
+  display: none;
+}
+
+@media (min-width: 960px) {
+  /* Removes dropdown overflow of the viewport */
+  .krystal-header .tc-block-dropdown.tc-search-drop-down {
+    right: 0;
+  }
+}

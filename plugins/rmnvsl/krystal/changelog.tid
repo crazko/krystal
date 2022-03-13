@@ -21,6 +21,7 @@ and this project adheres to [[Semantic Versioning|https://semver.org/spec/v2.0.0
 * "Sidebar" tiddlers not rendered correctly in TW 5.2.1 ([[#39|https://github.com/crazko/krystal/issues/39]])
 * "Sidebar" tiddlers titles show caption instead of system name ([[#31|https://github.com/crazko/krystal/issues/31]])
 * Width & scrolling in Firefox ([[#35|https://github.com/crazko/krystal/issues/35]])
+* Searchfield width during searching ([[#30|https://github.com/crazko/krystal/issues/30]])
 
 !! [0.4.0] - 2021-04-21
 

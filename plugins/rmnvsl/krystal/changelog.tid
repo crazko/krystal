@@ -12,6 +12,10 @@ and this project adheres to [[Semantic Versioning|https://semver.org/spec/v2.0.0
 * Header overlapping stacked tiddlers on the right side ([[#48|https://github.com/crazko/krystal/issues/48]]) thanks [[@ericworks|https://github.com/ericworks]]
 * Tiddlers frame effects during fast scrolling ([[#47|https://github.com/crazko/krystal/issues/47]]) thanks [[@hukacode|https://github.com/hukacode]]
 
+!!! Changed
+
+* Update TiddlyWiki to version `5.2.3`, see the official [[Changelog|https://tiddlywiki.com/#Release%205.2.3]]
+
 !! [0.5.0] - 2022-03-13
 
 !!! Added

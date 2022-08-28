@@ -23,7 +23,7 @@ Sets plugin behavior
 
     window.addEventListener("resize", header);
 
-    const throttledTiddlerFrameEffects = throttle(tiddlerFrameEffects, 100);
+    const throttledTiddlerFrameEffects = throttle(tiddlerFrameEffects, 10);
     window.addEventListener("scroll", throttledTiddlerFrameEffects, true);
 
     $tw.rootWidget.addEventListener("tm-remove", tiddlersCount);

@@ -73,7 +73,9 @@ Sets plugin behavior
   }
 
   function header() {
-    const height = document.querySelector(".krystal-header").offsetHeight;
+    const height = document.querySelector(
+      ".krystal-header.krystal-header--big"
+    ).offsetHeight;
     document.documentElement.style.setProperty(
       "--krystal-header-height",
       `${height}px`

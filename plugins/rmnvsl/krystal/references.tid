@@ -1,10 +1,10 @@
 title: $:/plugins/rmnvsl/krystal/references
 tags: $:/tags/ViewTemplate
 
-<$list filter="[!is[system]all[current]backlinks[]sort[title]] -[is[current]] +[limit[1]]" variable=none>
+<$list filter="[all[current]backlinks[]!is[system]sort[title]] -[is[current]] +[limit[1]]" variable=none>
 <ul class="krystal-references">
 <li class="krystal-references__title"><strong><$transclude tiddler="$:/plugins/rmnvsl/krystal/referenceshere" field="text" mode="inline" /></strong></li>
-<$list filter="[!is[system]all[current]backlinks[]sort[title]] -[is[current]]">
+<$list filter="[all[current]backlinks[]!is[system]sort[title]] -[is[current]]">
 <li class="krystal-references__reference">
 <$link>
 <b><$view field="title" /></b>

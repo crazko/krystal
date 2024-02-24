@@ -5,6 +5,12 @@ All notable changes to this project will be documented here.
 The format is based on [[Keep a Changelog|https://keepachangelog.com/en/1.0.0/]],
 and this project adheres to [[Semantic Versioning|https://semver.org/spec/v2.0.0.html]].
 
+!! [0.5.2] - 2024-02-24
+
+!!! Fixed
+
+* Tiddler backlinks do not contain system tiddlers ([[#56|https://github.com/crazko/krystal/pull/56]]) thanks [[@lucible|https://github.com/lucible]]
+
 !! [0.5.1] - 2022-08-28
 
 !!! Fixed
